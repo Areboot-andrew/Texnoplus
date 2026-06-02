@@ -1,0 +1,43 @@
+# .dockerignore - excludes from Docker build context for smaller/faster builds
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts (rebuilt inside Docker)
+dist
+dist.zip
+
+# Env and secrets (injected via Coolify build args or .env at runtime if needed; VITE_* are build-time)
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Git and VCS
+.git
+.gitignore
+
+# Docker related (avoid recursion)
+Dockerfile
+Dockerfile.*
+docker-compose*
+.dockerignore
+
+# IDE / OS
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+.cache
+*.tgz
+
+# Misc docs (optional, can be included if wanted)
+*.md
+SEO_*.md
+check_md5.js

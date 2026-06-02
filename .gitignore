@@ -1,0 +1,32 @@
+# .gitignore for technoplus-service
+# Coolify / GitHub deployment:
+# Ignore dependencies, build outputs, and secrets so only source is deployed.
+
+# Dependencies
+node_modules/
+
+# Build outputs (Vite + react-snap)
+dist/
+dist.zip
+
+# Environment variables / secrets (never commit these)
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Misc
+.cache/
+*.tgz
+

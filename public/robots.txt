@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://technoplus-service.com/sitemap.xml
