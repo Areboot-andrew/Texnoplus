@@ -55,16 +55,19 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <Reveal className="text-center lg:text-left">
-            <h1 className="text-4xl lg:text-6xl font-bold text-neutral-800 mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-neutral-800 mb-4 leading-tight">
               Сервісний центр{' '}
               <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
                 "Техноплюс"
               </span>
             </h1>
 
+            <p className="text-xl lg:text-2xl font-medium text-neutral-800 mb-4">
+              Ремонт телефонів, ноутбуків, ПК, колонок та акустики у Львові.
+            </p>
+
             <p className="text-lg lg:text-xl text-neutral-600 mb-8 leading-relaxed">
-              Професійний ремонт усіх видів електроніки та побутової техніки у Львові. 
-              Швидка діагностика, якісний ремонт, доступні ціни та гарантія на всі роботи.
+              Швидка діагностика, оригінальні запчастини, доступні ціни та надійна гарантія на всі роботи.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, AlertCircle, ChevronRight, Wrench } from 'lucide-react';
+import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import { withBasePath } from '@/lib/utils';
 import ParallaxSection from '@/components/ParallaxSection';
@@ -414,6 +415,16 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                                         <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
                                             {pageHeading}
                                         </h1>
+                                        <div className="mt-5 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-center gap-4 text-white/90 text-sm">
+                                            <div className="flex items-center gap-2">
+                                                <FaMapMarkerAlt className="text-accent-400" />
+                                                <span>вул. Івана Огієнка, 15, Львів</span>
+                                            </div>
+                                            <a href="tel:+380673851560" className="flex items-center gap-2 hover:text-accent-300 transition-colors">
+                                                <FaPhone className="text-accent-400" />
+                                                <span className="font-semibold">+38 (067) 385 15 60</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </ParallaxSection>
