@@ -42,8 +42,8 @@ const BrandsPage: React.FC<BrandsPageProps> = ({ categories, setHeaderBottomCont
   return (
     <>
       <SEO
-        title="Бренди | Техноплюс"
-        description="Ремонтуємо техніку Apple, Samsung, Xiaomi, JBL, Sony, LG, Bosch, Philips та інших брендів у Львові. Якісні запчастини і гарантія на роботи."
+        title="Бренди, які ми ремонтуємо | Сервісний центр Техноплюс"
+        description="Ремонтуємо техніку Apple, Samsung, Xiaomi, JBL, Sony та інших брендів у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60. Гарантія на роботи."
         keywords="ремонт брендів львів, ремонт техніки брендів, сервісний центр львів"
         canonicalUrl="https://technoplus-service.com/brands"
         imageUrl="https://technoplus-service.com/images/repair-work.webp"
