@@ -13,39 +13,39 @@
       "brands": [
         {
           "name": "JBL",
-          "logo": "https://logo.clearbit.com/jbl.com"
+          "logo": "/images/brands/jbl.svg"
         },
         {
           "name": "Harman/Kardon",
-          "logo": "https://logo.clearbit.com/harmankardon.com"
+          "logo": ""
         },
         {
           "name": "Marshall",
-          "logo": "https://logo.clearbit.com/marshallheadphones.com"
+          "logo": "/images/brands/marshall.svg"
         },
         {
           "name": "Bose",
-          "logo": "https://logo.clearbit.com/bose.com"
+          "logo": "/images/brands/bose.svg"
         },
         {
           "name": "Sony",
-          "logo": "https://logo.clearbit.com/sony.com"
+          "logo": "/images/brands/sony.svg"
         },
         {
           "name": "Anker",
-          "logo": "https://logo.clearbit.com/anker.com"
+          "logo": "/images/brands/anker.svg"
         },
         {
           "name": "Xiaomi",
-          "logo": "https://logo.clearbit.com/mi.com"
+          "logo": "/images/brands/xiaomi.svg"
         },
         {
           "name": "Philips",
-          "logo": "https://logo.clearbit.com/philips.com"
+          "logo": "/images/brands/philips.svg"
         },
         {
           "name": "Tronsmart",
-          "logo": "https://logo.clearbit.com/tronsmart.com"
+          "logo": ""
         }
       ],
       "services": [
@@ -106,55 +106,55 @@
       "brands": [
         {
           "name": "Apple",
-          "logo": "https://logo.clearbit.com/apple.com"
+          "logo": "/images/brands/apple.svg"
         },
         {
           "name": "Samsung",
-          "logo": "https://logo.clearbit.com/samsung.com"
+          "logo": "/images/brands/samsung.svg"
         },
         {
           "name": "Xiaomi",
-          "logo": "https://logo.clearbit.com/mi.com"
+          "logo": "/images/brands/xiaomi.svg"
         },
         {
           "name": "Redmi",
-          "logo": "https://logo.clearbit.com/mi.com"
+          "logo": "/images/brands/redmi.svg"
         },
         {
           "name": "Poco",
-          "logo": "https://logo.clearbit.com/po.co"
+          "logo": "/images/brands/poco.svg"
         },
         {
           "name": "Motorola",
-          "logo": "https://logo.clearbit.com/motorola.com"
+          "logo": "/images/brands/motorola.svg"
         },
         {
           "name": "Huawei",
-          "logo": "https://logo.clearbit.com/huawei.com"
+          "logo": "/images/brands/huawei.svg"
         },
         {
           "name": "Honor",
-          "logo": "https://logo.clearbit.com/hihonor.com"
+          "logo": "/images/brands/honor.svg"
         },
         {
           "name": "OnePlus",
-          "logo": "https://logo.clearbit.com/oneplus.com"
+          "logo": "/images/brands/oneplus.svg"
         },
         {
           "name": "Google Pixel",
-          "logo": "https://logo.clearbit.com/google.com"
+          "logo": "/images/brands/google_pixel.svg"
         },
         {
           "name": "Realme",
-          "logo": "https://logo.clearbit.com/realme.com"
+          "logo": "/images/brands/realme.svg"
         },
         {
           "name": "Oppo",
-          "logo": "https://logo.clearbit.com/oppo.com"
+          "logo": "/images/brands/oppo.svg"
         },
         {
           "name": "Vivo",
-          "logo": "https://logo.clearbit.com/vivo.com"
+          "logo": "/images/brands/vivo.svg"
         }
       ],
       "services": [
@@ -223,47 +223,47 @@
       "brands": [
         {
           "name": "Samsung",
-          "logo": "https://logo.clearbit.com/samsung.com"
+          "logo": "/images/brands/samsung.svg"
         },
         {
           "name": "LG",
-          "logo": "https://logo.clearbit.com/lg.com"
+          "logo": "/images/brands/lg.svg"
         },
         {
           "name": "Hisense",
-          "logo": "https://logo.clearbit.com/hisense.com"
+          "logo": "/images/brands/hisense.svg"
         },
         {
           "name": "Toshiba",
-          "logo": "https://logo.clearbit.com/toshiba.com"
+          "logo": "/images/brands/toshiba.svg"
         },
         {
           "name": "Xiaomi",
-          "logo": "https://logo.clearbit.com/mi.com"
+          "logo": "/images/brands/xiaomi.svg"
         },
         {
           "name": "Philips",
-          "logo": "https://logo.clearbit.com/philips.com"
+          "logo": "/images/brands/philips.svg"
         },
         {
           "name": "Sony",
-          "logo": "https://logo.clearbit.com/sony.com"
+          "logo": "/images/brands/sony.svg"
         },
         {
           "name": "TCL",
-          "logo": "https://logo.clearbit.com/tcl.com"
+          "logo": "/images/brands/tcl.svg"
         },
         {
           "name": "Kivi",
-          "logo": "https://logo.clearbit.com/kivi.ua"
+          "logo": "/images/brands/kivi.svg"
         },
         {
           "name": "Sharp",
-          "logo": "https://logo.clearbit.com/sharp.com"
+          "logo": "/images/brands/sharp.svg"
         },
         {
           "name": "Panasonic",
-          "logo": "https://logo.clearbit.com/panasonic.com"
+          "logo": "/images/brands/panasonic.svg"
         }
       ],
       "services": [
@@ -324,43 +324,43 @@
       "brands": [
         {
           "name": "Samsung",
-          "logo": "https://logo.clearbit.com/samsung.com"
+          "logo": "/images/brands/samsung.svg"
         },
         {
           "name": "LG",
-          "logo": "https://logo.clearbit.com/lg.com"
+          "logo": "/images/brands/lg.svg"
         },
         {
           "name": "Bosch",
-          "logo": "https://logo.clearbit.com/bosch.com"
+          "logo": "/images/brands/bosch.svg"
         },
         {
           "name": "Philips",
-          "logo": "https://logo.clearbit.com/philips.com"
+          "logo": "/images/brands/philips.svg"
         },
         {
           "name": "Tefal",
-          "logo": "https://logo.clearbit.com/tefal.com"
+          "logo": "/images/brands/tefal.svg"
         },
         {
           "name": "Moulinex",
-          "logo": "https://logo.clearbit.com/moulinex.com"
+          "logo": "/images/brands/moulinex.svg"
         },
         {
           "name": "Braun",
-          "logo": "https://logo.clearbit.com/braun.com"
+          "logo": "/images/brands/braun.svg"
         },
         {
           "name": "Kenwood",
-          "logo": "https://logo.clearbit.com/kenwoodworld.com"
+          "logo": "/images/brands/kenwood.svg"
         },
         {
           "name": "Delonghi",
-          "logo": "https://logo.clearbit.com/delonghi.com"
+          "logo": "/images/brands/delonghi.svg"
         },
         {
           "name": "Gorenje",
-          "logo": "https://logo.clearbit.com/gorenje.com"
+          "logo": "/images/brands/gorenje.svg"
         }
       ],
       "services": [
@@ -417,39 +417,39 @@
       "brands": [
         {
           "name": "Apple",
-          "logo": "https://logo.clearbit.com/apple.com"
+          "logo": "/images/brands/apple.svg"
         },
         {
           "name": "HP",
-          "logo": "https://logo.clearbit.com/hp.com"
+          "logo": "/images/brands/hp.svg"
         },
         {
           "name": "Lenovo",
-          "logo": "https://logo.clearbit.com/lenovo.com"
+          "logo": "/images/brands/lenovo.svg"
         },
         {
           "name": "Asus",
-          "logo": "https://logo.clearbit.com/asus.com"
+          "logo": "/images/brands/asus.svg"
         },
         {
           "name": "Dell",
-          "logo": "https://logo.clearbit.com/dell.com"
+          "logo": "/images/brands/dell.svg"
         },
         {
           "name": "Acer",
-          "logo": "https://logo.clearbit.com/acer.com"
+          "logo": "/images/brands/acer.svg"
         },
         {
           "name": "MSI",
-          "logo": "https://logo.clearbit.com/msi.com"
+          "logo": "/images/brands/msi.svg"
         },
         {
           "name": "Samsung",
-          "logo": "https://logo.clearbit.com/samsung.com"
+          "logo": "/images/brands/samsung.svg"
         },
         {
           "name": "Microsoft Surface",
-          "logo": "https://logo.clearbit.com/microsoft.com"
+          "logo": "/images/brands/microsoft_surface.svg"
         }
       ],
       "services": [
@@ -514,43 +514,43 @@
       "brands": [
         {
           "name": "Apple",
-          "logo": "https://logo.clearbit.com/apple.com"
+          "logo": "/images/brands/apple.svg"
         },
         {
           "name": "Sony",
-          "logo": "https://logo.clearbit.com/sony.com"
+          "logo": "/images/brands/sony.svg"
         },
         {
           "name": "Sennheiser",
-          "logo": "https://logo.clearbit.com/sennheiser.com"
+          "logo": "/images/brands/sennheiser.svg"
         },
         {
           "name": "JBL",
-          "logo": "https://logo.clearbit.com/jbl.com"
+          "logo": "/images/brands/jbl.svg"
         },
         {
           "name": "Anker",
-          "logo": "https://logo.clearbit.com/anker.com"
+          "logo": "/images/brands/anker.svg"
         },
         {
           "name": "Samsung",
-          "logo": "https://logo.clearbit.com/samsung.com"
+          "logo": "/images/brands/samsung.svg"
         },
         {
           "name": "Xiaomi",
-          "logo": "https://logo.clearbit.com/mi.com"
+          "logo": "/images/brands/xiaomi.svg"
         },
         {
           "name": "Marshall",
-          "logo": "https://logo.clearbit.com/marshallheadphones.com"
+          "logo": "/images/brands/marshall.svg"
         },
         {
           "name": "Bose",
-          "logo": "https://logo.clearbit.com/bose.com"
+          "logo": "/images/brands/bose.svg"
         },
         {
           "name": "Beats",
-          "logo": "https://logo.clearbit.com/beatsbydre.com"
+          "logo": "/images/brands/beats.svg"
         }
       ],
       "services": [
@@ -599,31 +599,31 @@
       "brands": [
         {
           "name": "EcoFlow",
-          "logo": "https://logo.clearbit.com/ecoflow.com"
+          "logo": ""
         },
         {
           "name": "Bluetti",
-          "logo": "https://logo.clearbit.com/bluettipower.com"
+          "logo": ""
         },
         {
           "name": "Anker",
-          "logo": "https://logo.clearbit.com/anker.com"
+          "logo": "/images/brands/anker.svg"
         },
         {
           "name": "Jackery",
-          "logo": "https://logo.clearbit.com/jackery.com"
+          "logo": ""
         },
         {
           "name": "Xiaomi",
-          "logo": "https://logo.clearbit.com/mi.com"
+          "logo": "/images/brands/xiaomi.svg"
         },
         {
           "name": "Zendure",
-          "logo": "https://logo.clearbit.com/zendure.com"
+          "logo": ""
         },
         {
           "name": "Goal Zero",
-          "logo": "https://logo.clearbit.com/goalzero.com"
+          "logo": ""
         }
       ],
       "services": [
@@ -673,43 +673,43 @@
       "brands": [
         {
           "name": "Delonghi",
-          "logo": "https://logo.clearbit.com/delonghi.com"
+          "logo": "/images/brands/delonghi.svg"
         },
         {
           "name": "Saeco",
-          "logo": "https://logo.clearbit.com/saeco.com"
+          "logo": "/images/brands/saeco.svg"
         },
         {
           "name": "Philips",
-          "logo": "https://logo.clearbit.com/philips.com"
+          "logo": "/images/brands/philips.svg"
         },
         {
           "name": "Jura",
-          "logo": "https://logo.clearbit.com/jura.com"
+          "logo": "/images/brands/jura.svg"
         },
         {
           "name": "Krups",
-          "logo": "https://logo.clearbit.com/krups.com"
+          "logo": "/images/brands/krups.svg"
         },
         {
           "name": "Bosch",
-          "logo": "https://logo.clearbit.com/bosch.com"
+          "logo": "/images/brands/bosch.svg"
         },
         {
           "name": "Siemens",
-          "logo": "https://logo.clearbit.com/siemens.com"
+          "logo": "/images/brands/siemens.svg"
         },
         {
           "name": "Nivona",
-          "logo": "https://logo.clearbit.com/nivona.com"
+          "logo": ""
         },
         {
           "name": "Gaggia",
-          "logo": "https://logo.clearbit.com/gaggia.com"
+          "logo": "/images/brands/gaggia.svg"
         },
         {
           "name": "Miele",
-          "logo": "https://logo.clearbit.com/miele.com"
+          "logo": "/images/brands/miele.svg"
         }
       ],
       "services": [
@@ -764,43 +764,43 @@
       "brands": [
         {
           "name": "Intel",
-          "logo": "https://logo.clearbit.com/intel.com"
+          "logo": "/images/brands/intel.svg"
         },
         {
           "name": "AMD",
-          "logo": "https://logo.clearbit.com/amd.com"
+          "logo": "/images/brands/amd.svg"
         },
         {
           "name": "NVIDIA",
-          "logo": "https://logo.clearbit.com/nvidia.com"
+          "logo": "/images/brands/nvidia.svg"
         },
         {
           "name": "ASUS",
-          "logo": "https://logo.clearbit.com/asus.com"
+          "logo": "/images/brands/asus.svg"
         },
         {
           "name": "MSI",
-          "logo": "https://logo.clearbit.com/msi.com"
+          "logo": "/images/brands/msi.svg"
         },
         {
           "name": "Gigabyte",
-          "logo": "https://logo.clearbit.com/gigabyte.com"
+          "logo": "/images/brands/gigabyte.svg"
         },
         {
           "name": "ASRock",
-          "logo": "https://logo.clearbit.com/asrock.com"
+          "logo": "/images/brands/asrock.svg"
         },
         {
           "name": "Kingston",
-          "logo": "https://logo.clearbit.com/kingston.com"
+          "logo": "/images/brands/kingston.svg"
         },
         {
           "name": "Samsung",
-          "logo": "https://logo.clearbit.com/samsung.com"
+          "logo": "/images/brands/samsung.svg"
         },
         {
           "name": "Corsair",
-          "logo": "https://logo.clearbit.com/corsair.com"
+          "logo": "/images/brands/corsair.svg"
         }
       ],
       "services": [
