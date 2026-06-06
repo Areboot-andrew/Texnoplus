@@ -404,24 +404,24 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                             <ParallaxSection
                                 backgroundImage={category.image}
                                 overlayClassName="bg-gradient-to-b from-black/35 via-black/10 to-black/35"
-                                className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video lg:aspect-square"
+                                className="relative rounded-2xl overflow-hidden shadow-2xl min-h-[350px] sm:min-h-[400px] lg:aspect-square"
                             >
-                                <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
-                                    <div className="max-w-[92%] rounded-2xl bg-black/35 backdrop-blur-sm px-6 py-5 border border-white/10 shadow-xl">
-                                        <div className="text-4xl mb-3">{category.icon}</div>
-                                        <div className="text-white/80 text-sm font-medium mb-2">
+                                <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center">
+                                    <div className="max-w-[95%] sm:max-w-[92%] rounded-2xl bg-black/35 backdrop-blur-sm px-4 py-6 sm:px-6 sm:py-5 border border-white/10 shadow-xl">
+                                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{category.icon}</div>
+                                        <div className="text-white/80 text-xs sm:text-sm font-medium mb-2">
                                             Послуги / {category.title}
                                         </div>
-                                        <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+                                        <h1 className="text-white text-xl sm:text-3xl lg:text-4xl font-bold leading-tight">
                                             {pageHeading}
                                         </h1>
-                                        <div className="mt-5 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-center gap-4 text-white/90 text-sm">
+                                        <div className="mt-4 sm:mt-5 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-white/90 text-sm">
                                             <div className="flex items-center gap-2">
-                                                <FaMapMarkerAlt className="text-accent-400" />
-                                                <span>вул. Івана Огієнка, 15, Львів</span>
+                                                <FaMapMarkerAlt className="text-accent-400 flex-shrink-0" />
+                                                <span>вул. І. Огієнка, 15, Львів</span>
                                             </div>
                                             <a href="tel:+380673851560" className="flex items-center gap-2 hover:text-accent-300 transition-colors">
-                                                <FaPhone className="text-accent-400" />
+                                                <FaPhone className="text-accent-400 flex-shrink-0" />
                                                 <span className="font-semibold">+38 (067) 385 15 60</span>
                                             </a>
                                         </div>
