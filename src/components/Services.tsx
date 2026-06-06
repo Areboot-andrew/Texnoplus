@@ -71,13 +71,12 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
               <Link to={`/service/${category.id}`} className="block h-full">
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100/50 h-full flex flex-col">
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden flex-shrink-0">
+                  <div className="relative aspect-square overflow-hidden flex-shrink-0 bg-neutral-100">
                     <img
                       src={withBasePath(category.image)}
                       alt={category.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent"></div>
                     <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 md:backdrop-blur-sm rounded-full flex items-center justify-center text-2xl">
                       {category.icon}
                     </div>
