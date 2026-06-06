@@ -38,7 +38,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
     <ParallaxSection
       id="prices"
       className="py-16 lg:py-24"
-      backgroundImage="/images/service-center.jpg"
+      backgroundImage="/images/service-center.webp"
       overlayClassName="bg-gradient-to-b from-accent-50/95 via-white/95 to-primary-50/95"
     >
       <div className="container mx-auto px-4">

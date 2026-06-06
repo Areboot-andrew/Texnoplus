@@ -37,16 +37,16 @@ const serviceKeywordByCategory: Record<string, string> = {
 };
 
 const photoLikeLogoFiles = new Set([
-    '/images/brands/apple_5.jpg',
-    '/images/brands/apple_6.jpg',
+    '/images/brands/apple_5.webp',
+    '/images/brands/apple_6.webp',
     '/images/brands/apple_7.webp',
-    '/images/brands/anker.jpg',
-    '/images/brands/asus.jpg',
-    '/images/brands/hp.jpeg',
-    '/images/brands/jackery.jpg',
-    '/images/brands/samsung.png',
-    '/images/brands/sony.jpg',
-    '/images/brands/xiaomi.jpg',
+    '/images/brands/anker.webp',
+    '/images/brands/asus.webp',
+    '/images/brands/hp.webp',
+    '/images/brands/jackery.webp',
+    '/images/brands/samsung.webp',
+    '/images/brands/sony.webp',
+    '/images/brands/xiaomi.webp',
 ]);
 
 const faqByCategory: Record<string, FaqItem[]> = {

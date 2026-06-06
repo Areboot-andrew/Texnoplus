@@ -306,7 +306,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
     <ParallaxSection
       id="contact"
       className="py-16 lg:py-24"
-      backgroundImage="/images/categories/smartphones.jpg"
+      backgroundImage="/images/categories/smartphones.webp"
       overlayClassName="bg-gradient-to-b from-white/95 via-white/95 to-neutral-50/95"
     >
       <div className="container mx-auto px-4">

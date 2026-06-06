@@ -8,16 +8,16 @@
       "keywords": "ремонт колонок львів, ремонт jbl charge львів, ремонт marshall emberton, заміна акумулятора колонки jbl, ремонт bluetooth колонки львів, сервіс портативної акустики, ремонт bose soundlink",
       "description": "Ремонт Bluetooth-колонок, саундбарів і домашньої акустики",
       "detailedDescription": "Ремонтуємо портативні Bluetooth-колонки, саундбари та домашню акустику у Львові. Працюємо з JBL, Marshall, Harman/Kardon, Sony, Bose, Anker, Xiaomi та іншими брендами. На діагностиці перевіряємо живлення, акумулятор, динаміки, плату керування, роз'єми та Bluetooth-модуль.\n\nНайчастіше звертаються, коли колонка не вмикається, не заряджається, швидко розряджається, хрипить, не підключається до телефона або має пошкоджений USB-C/Micro-USB роз'єм. Після перевірки пояснюємо причину несправності, доступні варіанти ремонту і попередню вартість.\n\nВиконуємо заміну акумуляторів, ремонт контролерів заряду, відновлення плат після вологи, заміну динаміків, роз'ємів і корпусних елементів. Для моделей із вологозахистом додатково перевіряємо ущільнювачі, пасивні радіатори та герметичність корпусу.",
-      "image": "/images/categories/portable-speakers.jpg",
+      "image": "/images/categories/portable-speakers.webp",
       "icon": "🔊",
       "brands": [
         {
           "name": "JBL",
-          "logo": "/images/brands/jbl.png"
+          "logo": "/images/brands/jbl.webp"
         },
         {
           "name": "Harman/Kardon",
-          "logo": "/images/brands/harman-kardon.png"
+          "logo": "/images/brands/harman-kardon.webp"
         },
         {
           "name": "Marshall",
@@ -29,19 +29,19 @@
         },
         {
           "name": "Sony",
-          "logo": "/images/brands/sony.jpg"
+          "logo": "/images/brands/sony.webp"
         },
         {
           "name": "Anker",
-          "logo": "/images/brands/anker.jpg"
+          "logo": "/images/brands/anker.webp"
         },
         {
           "name": "Xiaomi",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Philips",
-          "logo": "/images/brands/philips.png"
+          "logo": "/images/brands/philips.webp"
         },
         {
           "name": "Tronsmart",
@@ -101,7 +101,7 @@
       "keywords": "ремонт телефонів львів, заміна екрану iphone львів, ремонт samsung galaxy львів, заміна батареї iphone, ремонт після води львів, сервісний центр apple львів, ремонт xiaomi redmi",
       "description": "Заміна екранів, акумуляторів, камер, роз'ємів і ремонт плат",
       "detailedDescription": "Виконуємо ремонт смартфонів і смарт-гаджетів у Львові: заміну дисплеїв, акумуляторів, корпусних деталей, камер, динаміків, мікрофонів і роз'ємів зарядки. Працюємо з Apple, Samsung, Xiaomi, Redmi, Poco, Motorola, Huawei, Honor, OnePlus, Google Pixel та іншими популярними брендами.\n\nПеред ремонтом проводимо діагностику, щоб точно визначити причину несправності: механічне пошкодження, знос акумулятора, проблема з платою, модулем камери, сенсором, шлейфами, роз'ємом або наслідки потрапляння вологи. Після перевірки погоджуємо вартість, строки і тип запчастин.\n\nТакож виконуємо компонентний ремонт плат, відновлення після залиття, програмне відновлення, перенесення або збереження даних там, де це технічно можливо. Якщо ремонт економічно недоцільний, попереджаємо про це до початку робіт.",
-      "image": "/images/categories/smartphones.jpg",
+      "image": "/images/categories/smartphones.webp",
       "icon": "📱",
       "brands": [
         {
@@ -110,19 +110,19 @@
         },
         {
           "name": "Samsung",
-          "logo": "/images/brands/samsung.png"
+          "logo": "/images/brands/samsung.webp"
         },
         {
           "name": "Xiaomi",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Redmi",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Poco",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Motorola",
@@ -223,15 +223,15 @@
       "brands": [
         {
           "name": "Samsung",
-          "logo": "/images/brands/samsung.png"
+          "logo": "/images/brands/samsung.webp"
         },
         {
           "name": "LG",
-          "logo": "/images/brands/lg.jpg"
+          "logo": "/images/brands/lg.webp"
         },
         {
           "name": "Hisense",
-          "logo": "/images/brands/hisense.jpg"
+          "logo": "/images/brands/hisense.webp"
         },
         {
           "name": "Toshiba",
@@ -239,19 +239,19 @@
         },
         {
           "name": "Xiaomi",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Philips",
-          "logo": "/images/brands/philips.png"
+          "logo": "/images/brands/philips.webp"
         },
         {
           "name": "Sony",
-          "logo": "/images/brands/sony.jpg"
+          "logo": "/images/brands/sony.webp"
         },
         {
           "name": "TCL",
-          "logo": "/images/brands/tcl.jpg"
+          "logo": "/images/brands/tcl.webp"
         },
         {
           "name": "Kivi",
@@ -323,24 +323,24 @@
       "keywords": "ремонт мікрохвильовок львів, ремонт блендерів львів, ремонт кухонних комбайнів, ремонт чайників, ремонт мультиварок львів, майстерня побутової техніки",
       "description": "Ремонт мікрохвильовок, блендерів, комбайнів, чайників і мультиварок",
       "detailedDescription": "Ремонтуємо дрібну побутову техніку у Львові: мікрохвильовки, блендери, кухонні комбайни, мультиварки, чайники, м'ясорубки, тостери, термопоти та інші пристрої. Працюємо з Bosch, Philips, Tefal, Moulinex, Braun, Kenwood, Gorenje та іншими брендами.\n\nДля кожного пристрою перевіряємо вузли, які найчастіше виходять з ладу: двигун, редуктор, нагрівальний елемент, плату керування, кнопки, датчики, запобіжники, кабель живлення і корпусні деталі. Для мікрохвильовок окремо перевіряємо магнетрон, високовольтний блок, запобіжники і слюдяну пластину.\n\nПісля діагностики пояснюємо, чи є сенс ремонтувати пристрій, які деталі потрібні і скільки це коштуватиме. Ремонт починаємо тільки після погодження вартості.",
-      "image": "/images/categories/appliances.jpg",
+      "image": "/images/categories/appliances.webp",
       "icon": "🏠",
       "brands": [
         {
           "name": "Samsung",
-          "logo": "/images/brands/samsung.png"
+          "logo": "/images/brands/samsung.webp"
         },
         {
           "name": "LG",
-          "logo": "/images/brands/lg.jpg"
+          "logo": "/images/brands/lg.webp"
         },
         {
           "name": "Bosch",
-          "logo": "/images/brands/bosch.png"
+          "logo": "/images/brands/bosch.webp"
         },
         {
           "name": "Philips",
-          "logo": "/images/brands/philips.png"
+          "logo": "/images/brands/philips.webp"
         },
         {
           "name": "Tefal",
@@ -416,7 +416,7 @@
       "keywords": "ремонт ноутбуків львів, чистка ноутбука львів, ремонт macbook львів, встановлення windows львів, апгрейд ноутбука, заміна екрану ноутбука, ремонт материнки ноутбука, чистка від пилу",
       "description": "Ремонт ноутбуків, ПК, планшетів, апгрейд і програмне налаштування",
       "detailedDescription": "Ремонтуємо ноутбуки, комп'ютери та планшети у Львові. Працюємо з MacBook, Asus, Lenovo, HP, Dell, Acer, MSI, Samsung та іншими брендами, виконуємо як модульний ремонт, так і компонентне відновлення плат.\n\nТипові звернення: ноутбук не вмикається, перегрівається, не заряджається, повільно працює, має пошкоджену клавіатуру, екран, роз'єм живлення або наслідки потрапляння рідини. Під час діагностики перевіряємо живлення, систему охолодження, накопичувач, оперативну пам'ять, матрицю, шлейфи та материнську плату.\n\nВиконуємо чистку системи охолодження, заміну екранів, клавіатур, акумуляторів, SSD/HDD, роз'ємів живлення, ремонт плат, встановлення Windows/macOS, налаштування драйверів і відновлення даних там, де це можливо. Вартість і строки погоджуємо після діагностики.",
-      "image": "/images/categories/computers.jpg",
+      "image": "/images/categories/computers.webp",
       "icon": "💻",
       "brands": [
         {
@@ -425,19 +425,19 @@
         },
         {
           "name": "HP",
-          "logo": "/images/brands/hp.jpeg"
+          "logo": "/images/brands/hp.webp"
         },
         {
           "name": "Lenovo",
-          "logo": "/images/brands/lenovo.png"
+          "logo": "/images/brands/lenovo.webp"
         },
         {
           "name": "Asus",
-          "logo": "/images/brands/asus.jpg"
+          "logo": "/images/brands/asus.webp"
         },
         {
           "name": "Dell",
-          "logo": "/images/brands/dell.png"
+          "logo": "/images/brands/dell.webp"
         },
         {
           "name": "Acer",
@@ -449,7 +449,7 @@
         },
         {
           "name": "Samsung",
-          "logo": "/images/brands/samsung.png"
+          "logo": "/images/brands/samsung.webp"
         },
         {
           "name": "Microsoft Surface",
@@ -513,7 +513,7 @@
       "keywords": "ремонт навушників львів, ремонт airpods, заміна штекера навушників, ремонт бездротових навушників, ремонт гарнітури",
       "description": "Ремонт TWS, дротових, повнорозмірних і преміальних навушників",
       "detailedDescription": "Ремонтуємо бездротові TWS, повнорозмірні та дротові навушники у Львові. Працюємо з AirPods, Samsung Galaxy Buds, Sony, JBL, Marshall, Sennheiser, Anker та іншими брендами.\n\nДля TWS-навушників спочатку оцінюємо конструкцію конкретної моделі, бо не всі компактні навушники розбірні або економічно доцільні в ремонті. Типові роботи: чистка сіток і контактів, перевірка кейса зарядки, заміна акумулятора там, де це можливо, відновлення після вологи або падіння.\n\nДля класичних, студійних і преміальних моделей ремонт часто має більше сенсу. Відновлюємо або замінюємо динаміки, ремонтуємо кабелі, штекери, роз'єми, оголів'я, шарніри, кронштейни та корпусні тріщини. Також виконуємо заміну амбушур і реставрацію корпусних деталей після механічних пошкоджень.",
-      "image": "/images/categories/headphones.jpeg",
+      "image": "/images/categories/headphones.webp",
       "icon": "🎧",
       "brands": [
         {
@@ -522,27 +522,27 @@
         },
         {
           "name": "Sony",
-          "logo": "/images/brands/sony.jpg"
+          "logo": "/images/brands/sony.webp"
         },
         {
           "name": "Sennheiser",
-          "logo": "/images/brands/sennheiser.jpeg"
+          "logo": "/images/brands/sennheiser.webp"
         },
         {
           "name": "JBL",
-          "logo": "/images/brands/jbl.png"
+          "logo": "/images/brands/jbl.webp"
         },
         {
           "name": "Anker",
-          "logo": "/images/brands/anker.jpg"
+          "logo": "/images/brands/anker.webp"
         },
         {
           "name": "Samsung",
-          "logo": "/images/brands/samsung.png"
+          "logo": "/images/brands/samsung.webp"
         },
         {
           "name": "Xiaomi",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Marshall",
@@ -598,7 +598,7 @@
       "keywords": "ремонт ecoflow львів, ремонт bluetti, ремонт зарядних станцій, ремонт повербанків, ремонт інверторів, ремонт акумуляторів",
       "description": "Ремонт зарядних станцій, повербанків, BMS та інверторних блоків",
       "detailedDescription": "Виконуємо ремонт портативних зарядних станцій, повербанків та інверторних блоків у Львові. Працюємо з EcoFlow, Bluetti, Anker, Jackery, Xiaomi, Zendure та іншими пристроями, де важлива правильна діагностика батареї, BMS, інвертора і зарядних модулів.\n\nПеревіряємо причини типових несправностей: станція не вмикається, не заряджається, не видає 220В, показує помилки, швидко втрачає ємність або має пошкоджені порти. Окремо діагностуємо вентилятори охолодження, MPPT-контролери, роз'єми XT60, USB, DC та мережевий вихід.\n\nМожливі роботи: ремонт плат BMS, відновлення інвертора, заміна роз'ємів, ремонт зарядної частини, відновлення після глибокого розряду та заміна акумуляторних елементів після узгодження вартості.",
-      "image": "/images/categories/power-stations.jpg",
+      "image": "/images/categories/power-stations.webp",
       "icon": "🔋",
       "brands": [
         {
@@ -611,15 +611,15 @@
         },
         {
           "name": "Anker",
-          "logo": "/images/brands/anker.jpg"
+          "logo": "/images/brands/anker.webp"
         },
         {
           "name": "Jackery",
-          "logo": "/images/brands/jackery.jpg"
+          "logo": "/images/brands/jackery.webp"
         },
         {
           "name": "Xiaomi",
-          "logo": "/images/brands/xiaomi.jpg"
+          "logo": "/images/brands/xiaomi.webp"
         },
         {
           "name": "Zendure",
@@ -672,7 +672,7 @@
       "keywords": "ремонт кавомашин львів, чистка кавоварки, ремонт delonghi, ремонт saeco, сервіс кавомашин, декальцинація",
       "description": "Ремонт, чистка та обслуговування автоматичних і рожкових кавомашин",
       "detailedDescription": "Ремонтуємо та обслуговуємо кавомашини і кавові апарати у Львові. Працюємо з Saeco, DeLonghi, Jura, Philips, Krups, Bosch, Siemens, Nivona, Gaggia, Miele та іншими автоматичними і рожковими моделями.\n\nПід час діагностики перевіряємо помпу, бойлер, термоблок, заварювальний блок, кавомолку, клапани, ущільнювачі, датчики, плату керування і гідросистему. Часті звернення: кавомашина не подає воду, протікає, не меле каву, не гріє, видає помилку або потребує декальцинації.\n\nВиконуємо чистку від накипу і кавових масел, заміну ущільнювачів, ремонт помпи, кавомолки, нагрівального вузла та електроніки. Вартість робіт погоджуємо після огляду і визначення причини несправності.",
-      "image": "/images/categories/coffee-machines.jpg",
+      "image": "/images/categories/coffee-machines.webp",
       "icon": "☕",
       "brands": [
         {
@@ -685,7 +685,7 @@
         },
         {
           "name": "Philips",
-          "logo": "/images/brands/philips.png"
+          "logo": "/images/brands/philips.webp"
         },
         {
           "name": "Jura",
@@ -697,7 +697,7 @@
         },
         {
           "name": "Bosch",
-          "logo": "/images/brands/bosch.png"
+          "logo": "/images/brands/bosch.webp"
         },
         {
           "name": "Siemens",
@@ -763,7 +763,7 @@
       "keywords": "збірка пк львів, апгрейд комп'ютера, ігровий пк на замовлення, підбір комплектуючих пк, модернізація комп'ютера",
       "description": "Підбір комплектуючих, складання ПК, апгрейд і налаштування системи",
       "detailedDescription": "Виконуємо складання, модернізацію та налаштування персональних комп'ютерів у Львові. Допомагаємо підібрати комплектуючі для ігрового ПК, робочої станції, офісного комп'ютера або апгрейду вже наявної системи.\n\nПідбираємо процесор, відеокарту, материнську плату, оперативну пам'ять, SSD, блок живлення і корпус з урахуванням бюджету, задач, сумісності та майбутнього апгрейду. Під час складання налаштовуємо кабель-менеджмент, охолодження, BIOS/UEFI, XMP/EXPO профілі та драйвери.\n\nТакож виконуємо апгрейд старих ПК: заміну HDD на SSD, додавання оперативної пам'яті, встановлення відеокарти, заміну блока живлення або системи охолодження. Після робіт перевіряємо стабільність системи тестами навантаження.",
-      "image": "/images/categories/pc-assembly.jpg",
+      "image": "/images/categories/pc-assembly.webp",
       "icon": "🔧",
       "brands": [
         {
@@ -780,7 +780,7 @@
         },
         {
           "name": "ASUS",
-          "logo": "/images/brands/asus.jpg"
+          "logo": "/images/brands/asus.webp"
         },
         {
           "name": "MSI",
@@ -800,7 +800,7 @@
         },
         {
           "name": "Samsung",
-          "logo": "/images/brands/samsung.png"
+          "logo": "/images/brands/samsung.webp"
         },
         {
           "name": "Corsair",

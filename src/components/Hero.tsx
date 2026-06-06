@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
   return (
     <ParallaxSection
       className="min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-32"
-      backgroundImage="/images/service-center.jpg"
+      backgroundImage="/images/service-center.webp"
       overlayClassName="bg-gradient-to-br from-primary-50/95 via-white/95 to-accent-50/95"
     >
       <div className="container mx-auto px-4 relative z-10">
@@ -102,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
           <Reveal delayMs={160} className="relative">
             <div className="relative">
               <img
-                src={withBasePath('/images/service-hero.jpg')}
+                src={withBasePath('/images/service-hero.webp')}
                 alt="Сервісний центр Техноплюс"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
