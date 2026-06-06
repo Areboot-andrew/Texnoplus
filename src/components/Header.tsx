@@ -130,9 +130,11 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
         {/* Main navigation */}
         <div className="flex items-center justify-between py-2.5">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              Т+
-            </div>
+            <img 
+              src={withBasePath('/images/logo.webp?v=1')} 
+              alt="Техноплюс Логотип" 
+              className="w-12 h-12 object-contain"
+            />
             <div>
               <div className="text-xl font-bold text-neutral-800">{company.name}</div>
               <p className="text-sm text-neutral-600 hidden sm:block">Професійний ремонт техніки</p>
