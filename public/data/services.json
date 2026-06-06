@@ -33,7 +33,7 @@
         },
         {
           "name": "Anker",
-          "logo": "/images/brands/anker.svg"
+          "logo": "/images/brands/anker.webp"
         },
         {
           "name": "Xiaomi",
@@ -122,7 +122,7 @@
         },
         {
           "name": "Poco",
-          "logo": "/images/brands/poco.svg"
+          "logo": "/images/brands/poco.webp"
         },
         {
           "name": "Motorola",
@@ -150,7 +150,7 @@
         },
         {
           "name": "Oppo",
-          "logo": "/images/brands/oppo.svg"
+          "logo": "/images/brands/oppo.webp"
         },
         {
           "name": "Vivo",
@@ -449,7 +449,7 @@
         },
         {
           "name": "Microsoft Surface",
-          "logo": "/images/brands/microsoft_surface.svg"
+          "logo": "/images/brands/microsoft_surface.webp"
         }
       ],
       "services": [
@@ -530,7 +530,7 @@
         },
         {
           "name": "Anker",
-          "logo": "/images/brands/anker.svg"
+          "logo": "/images/brands/anker.webp"
         },
         {
           "name": "Samsung",
@@ -599,15 +599,15 @@
       "brands": [
         {
           "name": "EcoFlow",
-          "logo": ""
+          "logo": "/images/brands/ecoflow.webp"
         },
         {
           "name": "Bluetti",
-          "logo": ""
+          "logo": "/images/brands/bluetti.svg"
         },
         {
           "name": "Anker",
-          "logo": "/images/brands/anker.svg"
+          "logo": "/images/brands/anker.webp"
         },
         {
           "name": "Jackery",
@@ -701,7 +701,7 @@
         },
         {
           "name": "Nivona",
-          "logo": ""
+          "logo": "/images/brands/nivona.webp"
         },
         {
           "name": "Gaggia",
