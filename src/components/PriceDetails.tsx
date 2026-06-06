@@ -80,9 +80,9 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                 <div className="flex items-center space-x-2">
                   <span className="text-sm text-neutral-500">{category.services.length} послуг</span>
                   {expandedCategories.has(category.id) ? (
-                    <FaChevronUp className="text-accent-500" />
+                    <FaChevronUp className="text-primary-500" />
                   ) : (
-                    <FaChevronDown className="text-accent-500" />
+                    <FaChevronDown className="text-primary-500" />
                   )}
                 </div>
               </button>
@@ -98,7 +98,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                     {/* Services table */}
                     <div className="mb-8">
                       <h4 className="text-lg font-semibold text-neutral-800 mb-4 flex items-center space-x-2">
-                        <FaTools className="text-accent-500" />
+                        <FaTools className="text-primary-500" />
                         <span>Ціни на ремонт</span>
                       </h4>
                       <div className="overflow-x-auto">
@@ -113,7 +113,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                             {category.services.map((service, idx) => (
                               <tr key={idx} className="border-b border-neutral-100 hover:bg-neutral-50 transition-colors">
                                 <td className="py-3 px-4 text-neutral-800">{service.name}</td>
-                                <td className="py-3 px-4 text-right font-semibold text-accent-600">{service.price}</td>
+                                <td className="py-3 px-4 text-right font-semibold text-primary-600">{service.price}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -177,7 +177,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:0673851560"
-              className="bg-white text-accent-600 px-8 py-3 rounded-full font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-lg"
+              className="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-lg"
             >
               Зателефонувати зараз
             </a>
@@ -186,7 +186,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                 const element = document.querySelector('#contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-accent-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300"
             >
               Залишити заявку
             </button>

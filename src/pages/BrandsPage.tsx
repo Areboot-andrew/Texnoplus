@@ -20,14 +20,14 @@ const BrandsPage: React.FC<BrandsPageProps> = ({ categories, setHeaderBottomCont
         <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-3">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-accent-600 transition-colors min-w-0"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-primary-600 transition-colors min-w-0"
           >
             <ArrowLeft className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">Назад на головну</span>
           </Link>
 
           <div className="hidden sm:flex items-center gap-2 text-sm text-neutral-600 min-w-0">
-            <Link to="/" className="hover:text-accent-600 transition-colors truncate">
+            <Link to="/" className="hover:text-primary-600 transition-colors truncate">
               Головна
             </Link>
             <ChevronRight className="w-4 h-4 text-neutral-400 flex-shrink-0" />

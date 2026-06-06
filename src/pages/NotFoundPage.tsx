@@ -14,7 +14,7 @@ const NotFoundPage: React.FC = () => {
 
             <div className="pt-[var(--header-height)] min-h-[70vh] flex items-center justify-center px-4">
                 <div className="max-w-xl text-center">
-                    <div className="text-6xl font-bold text-accent-600 mb-4">404</div>
+                    <div className="text-6xl font-bold text-primary-600 mb-4">404</div>
                     <h1 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
                         Сторінку не знайдено
                     </h1>

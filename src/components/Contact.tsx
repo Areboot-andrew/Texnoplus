@@ -349,7 +349,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                         placeholder="Ваше ім'я"
                       />
                     </div>
@@ -366,7 +366,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                         placeholder="+380 XX XXX XX XX"
                       />
                     </div>
@@ -383,7 +383,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                       autoComplete="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       placeholder="example@email.com"
                     />
                   </div>
@@ -399,7 +399,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         autoComplete="off"
                         value={formData.device}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       >
                         <option value="">Оберіть тип пристрою</option>
                         {deviceTypes.map((device) => (
@@ -418,7 +418,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         autoComplete="off"
                         value={formData.problem}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       >
                         <option value="">Оберіть проблему</option>
                         {availableProblems.map((problem) => (
@@ -439,7 +439,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-all duration-300 resize-vertical"
+                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-vertical"
                       placeholder="Опишіть детально що саме не працює, коли виникла проблема, які симптоми тощо..."
                     />
                   </div>
@@ -447,7 +447,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-neutral-600 to-accent-500 text-white py-4 px-6 rounded-lg font-semibold hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                   >
                     {isSubmitting ? (
                       <>

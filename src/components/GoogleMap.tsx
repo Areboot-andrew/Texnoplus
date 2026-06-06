@@ -115,14 +115,14 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ company }) => {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={getDirections}
-                  className="flex-1 bg-gradient-to-r from-neutral-600 to-accent-500 text-white py-3 px-4 rounded-lg font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <FaRoute />
                   <span>Маршрут</span>
                 </button>
                 <button
                   onClick={openInGoogleMaps}
-                  className="flex-1 border border-accent-500 text-accent-600 py-3 px-4 rounded-lg font-medium hover:bg-primary-50 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="flex-1 border border-primary-500 text-primary-600 py-3 px-4 rounded-lg font-medium hover:bg-primary-50 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <FaExternalLinkAlt />
                   <span>Відкрити</span>
@@ -131,7 +131,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ company }) => {
             </div>
 
             {/* Additional info */}
-            <div className="bg-gradient-to-r from-neutral-600 to-accent-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl p-6 text-white">
               <h4 className="font-bold mb-3">Як нас знайти?</h4>
               <ul className="space-y-2 text-sm opacity-90">
                 <li>• Фасадний вхід з вулиці Івана Огієнка</li>
@@ -167,14 +167,14 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ company }) => {
                   <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                     <button
                       onClick={getDirections}
-                      className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white py-3 px-5 rounded-lg font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 px-5 rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <FaRoute />
                       <span>Маршрут</span>
                     </button>
                     <button
                       onClick={openInGoogleMaps}
-                      className="border border-accent-500 text-accent-600 py-3 px-5 rounded-lg font-medium hover:bg-primary-50 transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="border border-primary-500 text-primary-600 py-3 px-5 rounded-lg font-medium hover:bg-primary-50 transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <FaExternalLinkAlt />
                       <span>Відкрити</span>
