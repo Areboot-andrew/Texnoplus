@@ -877,7 +877,7 @@
       {
         "name": "Viber",
         "url": "viber://chat?number=%2B380673851560",
-        "icon": "/images/social/viber.svg",
+        "icon": "/images/social/viber_v2.svg",
         "color": "hover:text-purple-500"
       }
     ]
