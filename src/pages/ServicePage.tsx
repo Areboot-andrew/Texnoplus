@@ -403,37 +403,32 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                         <Reveal>
                             <ParallaxSection
                                 backgroundImage={category.image}
-                                overlayClassName="bg-gradient-to-b from-black/35 via-black/10 to-black/35"
-                                className="relative rounded-2xl overflow-hidden shadow-2xl min-h-[350px] sm:min-h-[400px] lg:aspect-square"
-                            >
-                                <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 text-center">
-                                    <div className="max-w-[95%] sm:max-w-[92%] rounded-2xl bg-black/35 backdrop-blur-sm px-4 py-6 sm:px-6 sm:py-5 border border-white/10 shadow-xl">
-                                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{category.icon}</div>
-                                        <div className="text-white/80 text-xs sm:text-sm font-medium mb-2">
-                                            Послуги / {category.title}
-                                        </div>
-                                        <h1 className="text-white text-xl sm:text-3xl lg:text-4xl font-bold leading-tight">
-                                            {pageHeading}
-                                        </h1>
-                                        <div className="mt-4 sm:mt-5 pt-4 border-t border-white/20 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-white/90 text-sm">
-                                            <div className="flex items-center gap-2">
-                                                <FaMapMarkerAlt className="text-accent-400 flex-shrink-0" />
-                                                <span>вул. І. Огієнка, 15, Львів</span>
-                                            </div>
-                                            <a href="tel:+380673851560" className="flex items-center gap-2 hover:text-accent-300 transition-colors">
-                                                <FaPhone className="text-accent-400 flex-shrink-0" />
-                                                <span className="font-semibold">+38 (067) 385 15 60</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ParallaxSection>
+                                className="relative rounded-2xl overflow-hidden shadow-2xl min-h-[300px] lg:aspect-square"
+                            />
                         </Reveal>
 
                         <div className="space-y-8">
                             <Reveal delayMs={120}>
                                 <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                                    <h2 className="text-2xl font-bold text-neutral-800 mb-4">Про послугу</h2>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="text-primary-500 text-3xl">{category.icon}</div>
+                                        <div className="text-neutral-500 text-sm font-medium uppercase tracking-wider">
+                                            Послуги / {category.title}
+                                        </div>
+                                    </div>
+                                    <h1 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6 leading-tight">
+                                        {pageHeading}
+                                    </h1>
+                                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm text-neutral-600 mb-8 pb-6 border-b border-neutral-100">
+                                        <div className="flex items-center gap-2">
+                                            <FaMapMarkerAlt className="text-accent-500 flex-shrink-0 text-lg" />
+                                            <span>вул. І. Огієнка, 15, Львів</span>
+                                        </div>
+                                        <a href="tel:+380673851560" className="flex items-center gap-2 hover:text-accent-600 transition-colors">
+                                            <FaPhone className="text-accent-500 flex-shrink-0 text-lg" />
+                                            <span className="font-semibold">+38 (067) 385 15 60</span>
+                                        </a>
+                                    </div>
                                     <div className="text-neutral-600 leading-relaxed text-lg space-y-4">
                                         {(category.detailedDescription || category.description).split('\n').map((paragraph: string, index: number) => (
                                             <p key={index}>{paragraph}</p>
