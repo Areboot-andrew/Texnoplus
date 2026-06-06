@@ -217,7 +217,7 @@ const faqByCategory: Record<string, FaqItem[]> = {
 const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomContent }) => {
     const { id, brandSlug } = useParams<{ id: string; brandSlug?: string }>();
     const category = categories.find(c => c.id === id);
-    const shouldUseTextLogo = (logo: string) => !logo || photoLikeLogoFiles.has(logo);
+    const shouldUseTextLogo = (logo: string) => !logo || /^(https?:)?\/\//.test(logo) || photoLikeLogoFiles.has(logo);
     const selectedBrand = category?.brands?.find((brand: any) => slugifyBrand(brand.name) === brandSlug);
     const serviceKeyword = category ? serviceKeywordByCategory[category.id] || 'техніки' : 'техніки';
     const faqs = category ? faqByCategory[category.id] || [] : [];

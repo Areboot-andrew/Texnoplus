@@ -34,7 +34,7 @@ const photoLikeLogoFiles = new Set([
 
 const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const shouldUseTextLogo = (logo: string) => !logo || photoLikeLogoFiles.has(logo);
+  const shouldUseTextLogo = (logo: string) => !logo || /^(https?:)?\/\//.test(logo) || photoLikeLogoFiles.has(logo);
 
   const uniqueBrands = useMemo(() => {
     const allBrands = categories.flatMap((cat) => cat.brands || []);
