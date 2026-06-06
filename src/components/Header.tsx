@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaPhone, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { withBasePath } from '@/lib/utils';
 
 interface Company {
   name: string;
