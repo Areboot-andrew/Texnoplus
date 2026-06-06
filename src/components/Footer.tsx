@@ -72,9 +72,11 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
           {/* Company info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                Т+
-              </div>
+              <img 
+                src={withBasePath('/images/logo.webp?v=1')} 
+                alt={company.name} 
+                className="w-12 h-12 object-contain bg-white rounded-lg p-1"
+              />
               <div>
                 <h3 className="text-xl font-bold">{company.name}</h3>
                 <p className="text-neutral-400 text-sm">Професійний ремонт техніки</p>
@@ -169,7 +171,7 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
               </p>
               <button
                 onClick={() => scrollToSection('#contact')}
-                className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-primary-600 hover:to-accent-600 transition-all duration-300 w-full"
+                className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 w-full"
               >
                 Залишити заявку
               </button>
@@ -193,7 +195,7 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
             
             <button
               onClick={scrollToTop}
-              className="bg-gradient-to-r from-primary-500 to-accent-500 text-white w-10 h-10 rounded-full flex items-center justify-center hover:from-primary-600 hover:to-accent-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white w-10 h-10 rounded-full flex items-center justify-center hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
             >
               <FaArrowUp />
             </button>
