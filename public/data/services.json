@@ -776,7 +776,7 @@
         },
         {
           "name": "ASUS",
-          "logo": ""
+          "logo": "https://logo.clearbit.com/asus.com"
         },
         {
           "name": "MSI",
@@ -800,7 +800,7 @@
         },
         {
           "name": "Corsair",
-          "logo": ""
+          "logo": "https://logo.clearbit.com/corsair.com"
         }
       ],
       "services": [
