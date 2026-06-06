@@ -292,10 +292,10 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
     const imageUrl = `https://texno.plus${category.image}`;
     const seoTitle = selectedBrand
         ? `Ремонт ${serviceKeyword} ${selectedBrand.name} у Львові | Сервісний центр Техноплюс`
-        : `${category.metaTitle || category.title} | Сервісний центр Техноплюс`;
+        : (category.metaTitle || `${category.title} | Сервісний центр Техноплюс`);
     const seoDescription = selectedBrand
-        ? `Професійний ремонт ${serviceKeyword} ${selectedBrand.name} у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60. Швидка діагностика та гарантія.`
-        : `${category.metaDescription || category.description} Адреса: вул. І. Огієнка, 15, Львів. Тел: +38 (067) 385 15 60.`;
+        ? `Професійний ремонт ${serviceKeyword} ${selectedBrand.name} у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60.`
+        : `${category.metaDescription || category.description} Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60.`;
     const pageHeading = selectedBrand
         ? `Ремонт ${serviceKeyword} ${selectedBrand.name} у Львові`
         : category.title;
