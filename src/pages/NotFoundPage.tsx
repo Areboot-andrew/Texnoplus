@@ -8,7 +8,7 @@ const NotFoundPage: React.FC = () => {
             <SEO
                 title="404 — Сторінку не знайдено | Техноплюс"
                 description="Сторінку не знайдено. Поверніться на головну сторінку сервісного центру Техноплюс у Львові."
-                canonicalUrl="https://technoplus-service.com/404.html"
+                canonicalUrl="https://texno.plus/404.html"
                 robots="noindex, follow"
             />
 

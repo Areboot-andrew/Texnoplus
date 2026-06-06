@@ -45,8 +45,8 @@ const BrandsPage: React.FC<BrandsPageProps> = ({ categories, setHeaderBottomCont
         title="Бренди, які ми ремонтуємо | Сервісний центр Техноплюс"
         description="Ремонтуємо техніку Apple, Samsung, Xiaomi, JBL, Sony та інших брендів у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60. Гарантія на роботи."
         keywords="ремонт брендів львів, ремонт техніки брендів, сервісний центр львів"
-        canonicalUrl="https://technoplus-service.com/brands"
-        imageUrl="https://technoplus-service.com/images/repair-work.webp"
+        canonicalUrl="https://texno.plus/brands"
+        imageUrl="https://texno.plus/images/repair-work.webp"
       />
 
       <div className="pt-[var(--header-height)]">

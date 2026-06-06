@@ -287,9 +287,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
     }
 
     const canonicalUrl = selectedBrand
-        ? `https://technoplus-service.com/service/${id}/${brandSlug}`
-        : `https://technoplus-service.com/service/${id}`;
-    const imageUrl = `https://technoplus-service.com${category.image}`;
+        ? `https://texno.plus/service/${id}/${brandSlug}`
+        : `https://texno.plus/service/${id}`;
+    const imageUrl = `https://texno.plus${category.image}`;
     const seoTitle = selectedBrand
         ? `Ремонт ${serviceKeyword} ${selectedBrand.name} у Львові | Сервісний центр Техноплюс`
         : `${category.metaTitle || category.title} | Сервісний центр Техноплюс`;
@@ -307,12 +307,12 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
             "@type": "ListItem",
             "position": 1,
             "name": "Головна",
-            "item": "https://technoplus-service.com"
+            "item": "https://texno.plus"
         }, {
             "@type": "ListItem",
             "position": 2,
             "name": category.title,
-            "item": `https://technoplus-service.com/service/${id}`
+            "item": `https://texno.plus/service/${id}`
         }, {
             "@type": "ListItem",
             "position": 3,
@@ -322,7 +322,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
             "@type": "ListItem",
             "position": 1,
             "name": "Головна",
-            "item": "https://technoplus-service.com"
+            "item": "https://texno.plus"
         }, {
             "@type": "ListItem",
             "position": 2,
@@ -344,7 +344,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
         "@context": "https://schema.org",
         "@type": "Service",
         "name": pageHeading,
-        "image": "https://technoplus-service.com" + category.image,
+        "image": "https://texno.plus" + category.image,
         "description": seoDescription,
         "provider": {
             "@type": "LocalBusiness",

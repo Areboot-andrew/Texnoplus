@@ -18,8 +18,8 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": serviceData.company.name,
-        "image": "https://technoplus-service.com/images/service-hero.jpg",
-        "url": "https://technoplus-service.com/",
+        "image": "https://texno.plus/images/service-hero.jpg",
+        "url": "https://texno.plus/",
         "telephone": "+380673851560",
         "address": {
             "@type": "PostalAddress",
@@ -57,8 +57,8 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
                 title="Сервісний центр Техноплюс | Ремонт телефонів, колонок, ПК та ноутбуків"
                 description="Професійний ремонт техніки у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60. Швидка діагностика та гарантія на всі види робіт."
                 keywords="ремонт техніки львів, сервісний центр львів, ремонт телефонів, ремонт ноутбуків, ремонт колонок, ремонт пк"
-                canonicalUrl="https://technoplus-service.com/"
-                imageUrl="https://technoplus-service.com/images/service-hero.jpg"
+                canonicalUrl="https://texno.plus/"
+                imageUrl="https://texno.plus/images/service-hero.jpg"
                 jsonLd={localBusinessJsonLd}
             />
             <Hero company={serviceData.company} />
