@@ -18,7 +18,7 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": serviceData.company.name,
-        "image": "https://texno.plus/images/service-hero.webp",
+        "image": "https://texno.plus/images/service-hero.webp?v=2",
         "url": "https://texno.plus/",
         "telephone": "+380673851560",
         "address": {
@@ -58,7 +58,7 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
                 description="Професійний ремонт техніки у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60. Швидка діагностика та гарантія на всі види робіт."
                 keywords="ремонт техніки львів, сервісний центр львів, ремонт телефонів, ремонт ноутбуків, ремонт колонок, ремонт пк"
                 canonicalUrl="https://texno.plus/"
-                imageUrl="https://texno.plus/images/service-hero.webp"
+                imageUrl="https://texno.plus/images/service-hero.webp?v=2"
                 jsonLd={localBusinessJsonLd}
             />
             <Hero company={serviceData.company} />

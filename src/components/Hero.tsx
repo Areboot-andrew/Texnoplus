@@ -102,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
           <Reveal delayMs={160} className="relative">
             <div className="relative">
               <img
-                src={withBasePath('/images/service-hero.webp')}
+                src={withBasePath('/images/service-hero.webp?v=2')}
                 alt="Сервісний центр Техноплюс"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
