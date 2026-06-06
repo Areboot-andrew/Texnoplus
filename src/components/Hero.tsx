@@ -57,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
           <Reveal className="text-center lg:text-left">
             <h1 className="text-4xl lg:text-6xl font-bold text-neutral-800 mb-4 leading-tight">
               Сервісний центр{' '}
-              <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-neutral-700 to-accent-600 bg-clip-text text-transparent">
                 "Техноплюс"
               </span>
             </h1>
@@ -73,13 +73,13 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 onClick={() => scrollToSection('#contact')}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Отримати консультацію
               </button>
               <a
                 href={`tel:${company.phone.replace(/[-\s]/g, '')}`}
-                className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-neutral-600 to-accent-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-neutral-700 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
               >
                 <FaPhone />
                 <span>Зателефонувати</span>
@@ -106,7 +106,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
                 alt="Сервісний центр Техноплюс"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-700/20 to-transparent rounded-2xl"></div>
             </div>
           </Reveal>
         </div>
@@ -118,7 +118,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
               key={index}
               className="bg-white/80 md:backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100/50"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-neutral-600 to-accent-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
                 {feature.icon}
               </div>
               <h3 className="font-semibold text-neutral-800 mb-2">{feature.title}</h3>

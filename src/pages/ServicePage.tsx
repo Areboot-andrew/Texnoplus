@@ -234,18 +234,18 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                 <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-3">
                     <Link
                         to="/#services"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-primary-600 transition-colors min-w-0"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-accent-600 transition-colors min-w-0"
                     >
                         <ArrowLeft className="w-4 h-4 flex-shrink-0" />
                         <span className="truncate">Назад до всіх послуг</span>
                     </Link>
 
                     <div className="hidden sm:flex items-center gap-2 text-sm text-neutral-600 min-w-0">
-                        <Link to="/" className="hover:text-primary-600 transition-colors truncate">
+                        <Link to="/" className="hover:text-accent-600 transition-colors truncate">
                             Головна
                         </Link>
                         <ChevronRight className="w-4 h-4 text-neutral-400 flex-shrink-0" />
-                        <Link to="/#services" className="hover:text-primary-600 transition-colors truncate">
+                        <Link to="/#services" className="hover:text-accent-600 transition-colors truncate">
                             Послуги
                         </Link>
                         <ChevronRight className="w-4 h-4 text-neutral-400 flex-shrink-0" />
@@ -265,7 +265,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold text-neutral-800 mb-4">Послугу не знайдено</h2>
-                    <Link to="/" className="text-primary-600 hover:text-primary-700 font-medium">
+                    <Link to="/" className="text-accent-600 hover:text-accent-700 font-medium">
                         Повернутися на головну
                     </Link>
                 </div>
@@ -278,7 +278,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h2 className="text-2xl font-bold text-neutral-800 mb-4">Бренд для цієї послуги не знайдено</h2>
-                    <Link to={`/service/${id}`} className="text-primary-600 hover:text-primary-700 font-medium">
+                    <Link to={`/service/${id}`} className="text-accent-600 hover:text-accent-700 font-medium">
                         Повернутися до послуги
                     </Link>
                 </div>
@@ -411,7 +411,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                             <Reveal delayMs={120}>
                                 <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
                                     <div className="flex items-center gap-3 mb-4">
-                                        <div className="text-primary-500 text-3xl">{category.icon}</div>
+                                        <div className="text-accent-500 text-3xl">{category.icon}</div>
                                         <div className="text-neutral-500 text-sm font-medium uppercase tracking-wider">
                                             Послуги / {category.title}
                                         </div>
@@ -466,7 +466,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                                                 <Link
                                                     key={brand.name}
                                                     to={`/service/${category.id}/${slugifyBrand(brand.name)}`}
-                                                    className="rounded-full bg-primary-50 px-3 py-1 text-sm text-primary-700"
+                                                    className="rounded-full bg-primary-50 px-3 py-1 text-sm text-accent-700"
                                                 >
                                                     Ремонт {serviceKeyword} {brand.name} у Львові
                                                 </Link>
@@ -482,14 +482,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                         <Reveal>
                             <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
                             <div className="flex items-center mb-6">
-                                <Wrench className="w-6 h-6 text-primary-500 mr-3" />
+                                <Wrench className="w-6 h-6 text-accent-500 mr-3" />
                                 <h3 className="text-2xl font-bold text-neutral-800">Ціни на ремонт</h3>
                             </div>
                             <div className="space-y-4">
                                 {category.services.map((service: any, index: number) => (
                                     <div key={index} className="flex justify-between items-center py-3 border-b border-neutral-100 last:border-0">
                                         <span className="text-neutral-700 font-medium">{service.name}</span>
-                                        <span className="text-primary-600 font-bold whitespace-nowrap ml-4">{service.price}</span>
+                                        <span className="text-accent-600 font-bold whitespace-nowrap ml-4">{service.price}</span>
                                     </div>
                                 ))}
                             </div>
@@ -536,7 +536,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                         <Reveal delayMs={180}>
                             <Link
                                 to="/#contact"
-                                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1"
+                                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-neutral-600 to-accent-500 rounded-full shadow-lg hover:shadow-accent-500/30 hover:-translate-y-1"
                             >
                                 Записатись на ремонт
                             </Link>

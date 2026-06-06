@@ -148,10 +148,10 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-300 relative group"
+                className="text-neutral-700 hover:text-accent-600 font-medium transition-colors duration-300 relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-neutral-600 to-accent-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
@@ -159,7 +159,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
           {/* Call to Action Button */}
           <a
             href={`tel:${company.phone.replace(/[-\s]/g, '')}`}
-            className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-6 py-2.5 rounded-full font-semibold hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-neutral-600 to-accent-600 text-white px-6 py-2.5 rounded-full font-semibold hover:from-neutral-700 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             <FaPhone />
             <span>Зателефонувати</span>
@@ -169,7 +169,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
           <button
             type="button"
             onClick={openMobileMenu}
-            className="lg:hidden p-2 text-neutral-700 hover:text-primary-600 transition-colors"
+            className="lg:hidden p-2 text-neutral-700 hover:text-accent-600 transition-colors"
           >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -194,7 +194,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
                   <div className="flex items-center justify-end">
                     <button
                       onClick={closeMobileMenu}
-                      className="p-2 text-neutral-700 hover:text-primary-600 transition-colors"
+                      className="p-2 text-neutral-700 hover:text-accent-600 transition-colors"
                     >
                       <FaTimes size={24} />
                     </button>
@@ -207,14 +207,14 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
                           closeMobileMenu();
                           scrollToSection(item.href);
                         }}
-                        className="text-left text-neutral-800 hover:text-primary-600 font-semibold py-2 transition-colors"
+                        className="text-left text-neutral-800 hover:text-accent-600 font-semibold py-2 transition-colors"
                       >
                         {item.label}
                       </button>
                     ))}
                     <a
                       href={`tel:${company.phone.replace(/[-\s]/g, '')}`}
-                      className="flex items-center space-x-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-3 rounded-full font-semibold mt-2 w-fit"
+                      className="flex items-center space-x-2 bg-gradient-to-r from-neutral-600 to-accent-600 text-white px-4 py-3 rounded-full font-semibold mt-2 w-fit"
                     >
                       <FaPhone />
                       <span>Зателефонувати</span>

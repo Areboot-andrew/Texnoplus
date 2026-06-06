@@ -47,14 +47,14 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
     >
       <div className="container mx-auto px-4">
         <Reveal className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center space-x-2 bg-primary-100 text-accent-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <FaTools />
             <span>Наші послуги</span>
           </div>
 
           <h2 className="text-3xl lg:text-5xl font-bold text-neutral-800 mb-6">
             Професійний ремонт{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neutral-700 to-accent-600 bg-clip-text text-transparent">
               усіх видів техніки
             </span>
           </h2>
@@ -84,7 +84,7 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
 
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="font-bold text-lg text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors">
+                    <h3 className="font-bold text-lg text-neutral-800 mb-2 group-hover:text-accent-600 transition-colors">
                       {category.title}
                     </h3>
                     <p className="text-neutral-600 text-sm mb-4 line-clamp-2 flex-grow">
@@ -110,7 +110,7 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
 
                     {/* Action button */}
                     <div
-                      className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-md"
+                      className="w-full bg-gradient-to-r from-neutral-600 to-accent-500 text-white py-3 px-4 rounded-lg font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-md"
                     >
                       <span>Детальніше</span>
                       <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -132,7 +132,7 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
               const element = document.querySelector('#contact');
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-full font-semibold hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="bg-gradient-to-r from-neutral-600 to-accent-600 text-white px-8 py-4 rounded-full font-semibold hover:from-neutral-700 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Отримати консультацію
           </button>

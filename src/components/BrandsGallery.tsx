@@ -66,7 +66,7 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
 
           <h2 className="text-3xl lg:text-5xl font-bold text-neutral-800 mb-6">
             Ремонт техніки{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neutral-700 to-accent-600 bg-clip-text text-transparent">
               Apple, Samsung, JBL, Sony
             </span>
           </h2>
@@ -80,8 +80,8 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
           <button
             onClick={() => setSelectedCategory('all')}
             className={selectedCategory === 'all'
-              ? 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
-              : 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-primary-50 hover:text-primary-600 border border-neutral-200'}
+              ? 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-neutral-600 to-accent-500 text-white shadow-lg'
+              : 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-primary-50 hover:text-accent-600 border border-neutral-200'}
           >
             Всі бренди
           </button>
@@ -90,8 +90,8 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={selectedCategory === category.id
-                ? 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
-                : 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-primary-50 hover:text-primary-600 border border-neutral-200'}
+                ? 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-neutral-600 to-accent-500 text-white shadow-lg'
+                : 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-primary-50 hover:text-accent-600 border border-neutral-200'}
             >
               {category.title}
             </button>
@@ -141,7 +141,7 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
 
         <Reveal delayMs={300} className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white/90 rounded-2xl p-6 shadow-lg border border-neutral-100 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-primary-600 mb-1">50+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-accent-600 mb-1">50+</div>
             <div className="text-neutral-600">Брендів</div>
           </div>
           <div className="bg-white/90 rounded-2xl p-6 shadow-lg border border-neutral-100 text-center">
@@ -149,7 +149,7 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
             <div className="text-neutral-600">Категорій</div>
           </div>
           <div className="bg-white/90 rounded-2xl p-6 shadow-lg border border-neutral-100 text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-primary-600 mb-1">10000+</div>
+            <div className="text-3xl lg:text-4xl font-bold text-accent-600 mb-1">10000+</div>
             <div className="text-neutral-600">Ремонтів</div>
           </div>
           <div className="bg-white/90 rounded-2xl p-6 shadow-lg border border-neutral-100 text-center">

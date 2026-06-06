@@ -50,7 +50,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
           
           <h2 className="text-3xl lg:text-5xl font-bold text-neutral-800 mb-6">
             Прайс-лист{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neutral-700 to-accent-600 bg-clip-text text-transparent">
               послуг з ремонту
             </span>
           </h2>
@@ -69,7 +69,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                 className="w-full p-6 text-left hover:bg-neutral-50 transition-colors duration-300 flex items-center justify-between"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center text-white text-2xl">
+                  <div className="w-12 h-12 bg-gradient-to-br from-neutral-600 to-accent-500 rounded-xl flex items-center justify-center text-white text-2xl">
                     {category.icon}
                   </div>
                   <div>
@@ -80,9 +80,9 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                 <div className="flex items-center space-x-2">
                   <span className="text-sm text-neutral-500">{category.services.length} послуг</span>
                   {expandedCategories.has(category.id) ? (
-                    <FaChevronUp className="text-primary-500" />
+                    <FaChevronUp className="text-accent-500" />
                   ) : (
-                    <FaChevronDown className="text-primary-500" />
+                    <FaChevronDown className="text-accent-500" />
                   )}
                 </div>
               </button>
@@ -98,7 +98,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                     {/* Services table */}
                     <div className="mb-8">
                       <h4 className="text-lg font-semibold text-neutral-800 mb-4 flex items-center space-x-2">
-                        <FaTools className="text-primary-500" />
+                        <FaTools className="text-accent-500" />
                         <span>Ціни на ремонт</span>
                       </h4>
                       <div className="overflow-x-auto">
@@ -113,7 +113,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                             {category.services.map((service, idx) => (
                               <tr key={idx} className="border-b border-neutral-100 hover:bg-neutral-50 transition-colors">
                                 <td className="py-3 px-4 text-neutral-800">{service.name}</td>
-                                <td className="py-3 px-4 text-right font-semibold text-primary-600">{service.price}</td>
+                                <td className="py-3 px-4 text-right font-semibold text-accent-600">{service.price}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -171,13 +171,13 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
         </Reveal>
 
         {/* Call to action */}
-        <Reveal delayMs={240} className="bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl p-8 mt-16 text-white text-center">
+        <Reveal delayMs={240} className="bg-gradient-to-r from-neutral-600 to-accent-500 rounded-2xl p-8 mt-16 text-white text-center">
           <h3 className="text-2xl font-bold mb-4">Потрібна консультація щодо ремонту?</h3>
           <p className="mb-6 opacity-90">Зателефонуйте нам або залиште заявку, і ми розрахуємо точну вартість ремонту</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:0673851560"
-              className="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-lg"
+              className="bg-white text-accent-600 px-8 py-3 rounded-full font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-lg"
             >
               Зателефонувати зараз
             </a>
@@ -186,7 +186,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                 const element = document.querySelector('#contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-accent-600 transition-all duration-300"
             >
               Залишити заявку
             </button>
