@@ -124,7 +124,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
               </div>
             </Reveal>
           ))}
-        </Reveal>
+        </div>
       </div>
     </ParallaxSection>
   );
