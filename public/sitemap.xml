@@ -1,182 +1,512 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.texno.plus/</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/brands</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/brands</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.texno.plus/service/speakers</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/phones</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://texno.plus/faq</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/tvs</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://texno.plus/contact</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/appliances</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/service/speakers</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/computers</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/service/speakers/jbl</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/harman-kardon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/marshall</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/bose</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/sony</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/anker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/xiaomi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/philips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/speakers/tronsmart</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/headphones</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/service/phones/apple</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/samsung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/xiaomi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/redmi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/poco</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/motorola</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/huawei</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/honor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/oneplus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/google-pixel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/realme</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/oppo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/phones/vivo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/power-stations</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/service/tvs/samsung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/lg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/hisense</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/toshiba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/xiaomi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/philips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/sony</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/tcl</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/kivi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/sharp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/tvs/panasonic</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/coffee-machines</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/service/appliances/samsung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/lg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/bosch</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/philips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/tefal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/moulinex</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/braun</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/kenwood</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/delonghi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/appliances/gorenje</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/pc-assembly</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://texno.plus/service/computers/apple</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/hp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/lenovo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/asus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/dell</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/acer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/msi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/samsung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/computers/microsoft-surface</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/headphones</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/phones/apple</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/apple</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/phones/samsung</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/sony</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/phones/xiaomi</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/sennheiser</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/speakers/jbl</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/jbl</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/speakers/sony</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/anker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/speakers/marshall</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/samsung</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/tvs/samsung</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/xiaomi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/tvs/lg</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/marshall</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/tvs/sony</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/bose</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/computers/apple</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/headphones/beats</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/computers/asus</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/power-stations/ecoflow</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/computers/lenovo</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations/bluetti</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/headphones/apple</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations/anker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/headphones/sony</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations/jackery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/headphones/jbl</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations/xiaomi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/coffee-machines/delonghi</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations/zendure</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/coffee-machines/philips</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/power-stations/goal-zero</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/power-stations/ecoflow</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/coffee-machines</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/delonghi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.texno.plus/service/power-stations/anker</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://texno.plus/service/coffee-machines/saeco</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/philips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/jura</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/krups</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/bosch</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/siemens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/nivona</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/gaggia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/coffee-machines/miele</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/intel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/amd</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/nvidia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/asus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/msi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/gigabyte</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/asrock</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/kingston</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/samsung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://texno.plus/service/pc-assembly/corsair</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
