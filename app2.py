@@ -246,12 +246,18 @@ class ModernServiceCenterApp(QMainWindow):
     def create_format_menu(self):
         """Створення меню для форматування даних"""
         menubar = self.menuBar()
-        format_menu = menubar.addMenu("Форматування")
+        # Змінюємо назву меню на більш загальну
+        format_menu = menubar.addMenu("Додатково")
 
         # Додаємо дію для форматування даних
         format_action = QAction("Виправити формат записів", self)
         format_action.triggered.connect(self.format_records)
         format_menu.addAction(format_action)
+        
+        # Додаємо дію для синхронізації
+        sync_action = QAction("Синхронізувати базу із сайтом", self)
+        sync_action.triggered.connect(self.sync_all_to_firebase)
+        format_menu.addAction(sync_action)
 
     def format_records(self):
         """Функція для форматування записів у базі даних"""
@@ -286,6 +292,58 @@ class ModernServiceCenterApp(QMainWindow):
         
         QMessageBox.information(self, "Успіх", "Форматування записів завершено успішно")
         self.refresh_table()
+
+    def sync_all_to_firebase(self):
+        """Ручна синхронізація всієї бази з Firebase"""
+        if not getattr(self, 'firebase_initialized', False):
+            QMessageBox.warning(self, "Помилка", "З'єднання з сайтом не ініціалізовано. Перевірте файл ключа.")
+            return
+            
+        QMessageBox.information(self, "Синхронізація", "Розпочато повну синхронізацію з сайтом. Це працює у фоновому режимі та може зайняти кілька секунд.")
+        
+        def _sync_all():
+            try:
+                from firebase_admin import db
+                import sqlite3
+                import datetime
+                
+                with sqlite3.connect('service_center.db') as conn:
+                    c = conn.cursor()
+                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name FROM repairs")
+                    records = c.fetchall()
+                
+                if not records:
+                    return
+                
+                updates = {}
+                for record in records:
+                    r_id, phone, status, dev_type, brand, model, issue, price, client_name = record
+                    
+                    clean_phone = ''.join(filter(str.isdigit, str(phone))) if phone else ""
+                    safe_phone = clean_phone[-4:] if len(clean_phone) >= 4 else "0000"
+                    current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+                    
+                    data = {
+                        "id": r_id,
+                        "client_name": client_name if client_name else "Невідомо",
+                        "phone_last4": safe_phone,
+                        "status": status,
+                        "device": f"{dev_type} {brand} {model}".strip(),
+                        "issue": issue if issue else "",
+                        "price": price if price else 0,
+                        "update_date": current_date
+                    }
+                    updates[str(r_id)] = data
+                
+                if updates:
+                    db.reference('repairs').update(updates)
+                    print(f"Синхронізовано {len(updates)} записів.")
+                    
+            except Exception as e:
+                print(f"Full Sync Error: {e}")
+                
+        import threading
+        threading.Thread(target=_sync_all, daemon=True).start()
 
     def format_client_name(self, name):
         """Форматування імені клієнта: кожне слово з великої букви"""
