@@ -342,15 +342,13 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         Ім'я *
                       </label>
                       <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        autoComplete="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
-                        placeholder="Ваше ім'я"
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className={`w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 ${errors.name ? 'border-red-500 ring-1 ring-red-500' : ''}`}
+                          placeholder="Іван Іванов"
                       />
                     </div>
                     
@@ -366,7 +364,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
                         placeholder="+380 XX XXX XX XX"
                       />
                     </div>
@@ -383,7 +381,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                       autoComplete="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
                       placeholder="example@email.com"
                     />
                   </div>
@@ -394,12 +392,11 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         Тип пристрою
                       </label>
                       <select
-                        id="device"
-                        name="device"
-                        autoComplete="off"
-                        value={formData.device}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                          id="deviceType"
+                          name="deviceType"
+                          value={formData.deviceType}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 appearance-none"
                       >
                         <option value="">Оберіть тип пристрою</option>
                         {deviceTypes.map((device) => (
@@ -418,7 +415,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         autoComplete="off"
                         value={formData.problem}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
                       >
                         <option value="">Оберіть проблему</option>
                         {availableProblems.map((problem) => (
@@ -439,7 +436,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-vertical"
+                      className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 resize-vertical"
                       placeholder="Опишіть детально що саме не працює, коли виникла проблема, які симптоми тощо..."
                     />
                   </div>
@@ -447,7 +444,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-4 px-6 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:scale-100 flex items-center justify-center space-x-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -513,7 +510,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${social.color} text-white p-3 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center space-x-2`}
+                    className={`${social.color} text-white p-3 rounded-xl transition-all duration-300 hover:scale-[1.05] active:scale-95 shadow-md hover:shadow-lg flex items-center space-x-2`}
                   >
                     {social.icon}
                     <span className="font-medium">{social.name}</span>

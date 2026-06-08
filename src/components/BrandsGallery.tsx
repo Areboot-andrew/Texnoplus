@@ -80,8 +80,8 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
           <button
             onClick={() => setSelectedCategory('all')}
             className={selectedCategory === 'all'
-              ? 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
-              : 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-primary-50 hover:text-primary-600 border border-neutral-200'}
+              ? 'px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/20 hover:scale-[1.02] active:scale-95'
+              : 'px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-neutral-50 hover:text-primary-600 border border-neutral-200 hover:border-primary-200 hover:scale-[1.02] active:scale-95'}
           >
             Всі бренди
           </button>
@@ -90,8 +90,8 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={selectedCategory === category.id
-                ? 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg'
-                : 'px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-primary-50 hover:text-primary-600 border border-neutral-200'}
+                ? 'px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/20 hover:scale-[1.02] active:scale-95'
+                : 'px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-white text-neutral-600 hover:bg-neutral-50 hover:text-primary-600 border border-neutral-200 hover:border-primary-200 hover:scale-[1.02] active:scale-95'}
             >
               {category.title}
             </button>
@@ -102,7 +102,7 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
             {brandsToRender.map((brand, index) => (
               <div key={`${brand.name}-${index}`} className="group">
-                <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-neutral-100 aspect-square flex items-center justify-center">
+                <div className="bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-neutral-100 aspect-square flex items-center justify-center">
                   <div className="w-full h-full flex items-center justify-center">
                     {shouldUseTextLogo(brand.logo) ? (
                       <div className="brand-text text-center font-extrabold text-neutral-700 text-base sm:text-lg leading-tight tracking-wide px-2">

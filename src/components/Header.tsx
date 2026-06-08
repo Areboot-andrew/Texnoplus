@@ -169,7 +169,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
           {/* Call to Action Button */}
           <a
             href={`tel:${company.phone.replace(/[-\s]/g, '')}`}
-            className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-6 py-2.5 rounded-full font-semibold hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-6 py-2.5 rounded-xl font-semibold hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:scale-[1.02] active:scale-95"
           >
             <FaPhone />
             <span>Зателефонувати</span>
@@ -224,7 +224,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
                     ))}
                     <a
                       href={`tel:${company.phone.replace(/[-\s]/g, '')}`}
-                      className="flex items-center space-x-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-3 rounded-full font-semibold mt-2 w-fit"
+                      className="flex items-center space-x-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white px-4 py-3 rounded-xl font-semibold mt-2 w-fit active:scale-95 transition-all"
                     >
                       <FaPhone />
                       <span>Зателефонувати</span>

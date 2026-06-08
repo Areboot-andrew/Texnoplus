@@ -85,7 +85,7 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
                         <div className="flex-shrink-0">
                             <Link
                                 to="/brands"
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-white bg-gradient-to-r from-neutral-600 to-accent-500 hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-neutral-600 to-accent-500 hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:scale-[1.02] active:scale-95"
                             >
                                 Переглянути бренди
                             </Link>

@@ -71,15 +71,15 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button
-                onClick={() => scrollToSection('#contact')}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              <a
+                href="#services"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 hover:scale-[1.02] active:scale-95 text-center"
               >
                 Отримати консультацію
-              </button>
+              </a>
               <a
-                href={`tel:${company.phone.replace(/[-\s]/g, '')}`}
-                className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                href="/contact"
+                className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:scale-[1.02] active:scale-95 flex items-center justify-center space-x-2"
               >
                 <FaPhone />
                 <span>Зателефонувати</span>
@@ -112,18 +112,17 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
         </div>
 
         {/* Features grid */}
-        <Reveal delayMs={240} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white/80 md:backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100/50"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-neutral-600 to-accent-500 rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                {feature.icon}
+            <Reveal key={index} delayMs={feature.delay} className="h-full">
+              <div className="bg-white/80 md:backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-primary-100/50 h-full">
+                <div className="w-16 h-16 mx-auto bg-primary-50 rounded-2xl flex items-center justify-center mb-4 text-primary-600">
+                  {feature.icon}
+                </div>
+                <h3 className="font-semibold text-neutral-800 mb-2">{feature.title}</h3>
+                <p className="text-sm text-neutral-600">{feature.description}</p>
               </div>
-              <h3 className="font-semibold text-neutral-800 mb-2">{feature.title}</h3>
-              <p className="text-sm text-neutral-600">{feature.description}</p>
-            </div>
+            </Reveal>
           ))}
         </Reveal>
       </div>

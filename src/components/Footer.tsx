@@ -157,7 +157,7 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 bg-neutral-700 rounded-full flex items-center justify-center text-neutral-300 transition-all duration-300 hover:transform hover:-translate-y-1 ${social.color}`}
+                  className={`w-10 h-10 bg-neutral-700 rounded-xl flex items-center justify-center text-neutral-300 transition-all duration-300 hover:scale-[1.05] active:scale-95 ${social.color}`}
                 >
                   <img src={withBasePath(social.icon)} alt={social.name} className="w-5 h-5" />
                 </a>
@@ -171,7 +171,7 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
               </p>
               <button
                 onClick={() => scrollToSection('/contact')}
-                className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 w-full"
+                className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 w-full hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-accent-500/20"
               >
                 Залишити заявку
               </button>
@@ -195,7 +195,8 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
             
             <button
               onClick={scrollToTop}
-              className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white w-10 h-10 rounded-full flex items-center justify-center hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white w-10 h-10 rounded-xl flex items-center justify-center hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 hover:scale-[1.1] active:scale-95 shadow-lg shadow-accent-500/20"
+              aria-label="Наверх"
             >
               <FaArrowUp />
             </button>

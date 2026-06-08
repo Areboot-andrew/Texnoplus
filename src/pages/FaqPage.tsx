@@ -145,7 +145,7 @@ const FaqPage: React.FC<FaqPageProps> = ({ setHeaderBottomContent }) => {
                         <p className="text-neutral-600 mb-6">Зателефонуйте нам або залиште заявку на сайті, і наші фахівці з радістю вас проконсультують.</p>
                         <Link 
                             to="/contact" 
-                            className="inline-flex px-8 py-3 bg-gradient-to-r from-neutral-600 to-accent-500 text-white font-semibold rounded-full hover:from-neutral-700 hover:to-accent-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                            className="inline-flex px-8 py-3 bg-gradient-to-r from-neutral-600 to-accent-500 text-white font-semibold rounded-xl hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:scale-[1.02] active:scale-95"
                         >
                             Зв'язатися з нами
                         </Link>

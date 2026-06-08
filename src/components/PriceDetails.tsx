@@ -177,7 +177,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:0673851560"
-              className="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-lg"
+              className="bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold hover:bg-neutral-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95"
             >
               Зателефонувати зараз
             </a>
@@ -186,7 +186,7 @@ const PriceDetails: React.FC<PriceDetailsProps> = ({ categories }) => {
                 const element = document.querySelector('#contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300 hover:scale-[1.02] active:scale-95"
             >
               Залишити заявку
             </button>

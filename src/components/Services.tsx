@@ -66,10 +66,10 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
 
         <Reveal delayMs={140}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {categories.map((category) => (
-            <div key={category.id} className="group relative">
-              <Link to={`/service/${category.id}`} className="block h-full">
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100/50 h-full flex flex-col">
+          {categories.map((category, index) => (
+            <Reveal key={category.id} delayMs={index * 100} className="h-full">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-primary-100/50 h-full flex flex-col">
+                <Link to={`/service/${category.id}`} className="block h-full flex flex-col">
                   {/* Image */}
                   <div className="relative aspect-square overflow-hidden flex-shrink-0 bg-neutral-100">
                     <img
@@ -109,33 +109,28 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
                     </div>
 
                     {/* Action button */}
-                    <div
-                      className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 px-4 rounded-lg font-medium hover:from-primary-600 hover:to-primary-700 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-md"
-                    >
+                    <div className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 px-4 rounded-xl font-medium hover:from-primary-600 hover:to-primary-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-sm hover:shadow-primary-500/20 hover:scale-[1.02] active:scale-95">
                       <span>Детальніше</span>
                       <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
                     </div>
                   </div>
-                </div>
-              </Link>
-            </div>
+                </Link>
+              </div>
+            </Reveal>
           ))}
           </div>
         </Reveal>
 
-        <Reveal delayMs={220} className="text-center mt-12">
+        <Reveal delayMs={220} className="text-center mt-12 mb-8 lg:mb-0">
           <p className="text-neutral-600 mb-6">
             Не знайшли свій пристрій? Зателефонуйте нам для консультації!
           </p>
-          <button
-            onClick={() => {
-              const element = document.querySelector('#contact');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-full font-semibold hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:scale-[1.02] active:scale-95 inline-block"
           >
             Отримати консультацію
-          </button>
+          </Link>
         </Reveal>
       </div>
     </ParallaxSection>

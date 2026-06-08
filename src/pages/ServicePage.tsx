@@ -536,7 +536,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ categories, setHeaderBottomCo
                         <Reveal delayMs={180}>
                             <Link
                                 to="/#contact"
-                                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1"
+                                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 hover:scale-[1.02] active:scale-95"
                             >
                                 Записатись на ремонт
                             </Link>
