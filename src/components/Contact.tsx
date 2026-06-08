@@ -397,7 +397,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                           name="device"
                           value={formData.device}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-neutral-50 border border-accent-500 focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
+                          className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
                       >
                         <option value="">Оберіть тип пристрою</option>
                         {deviceTypes.map((device) => (
