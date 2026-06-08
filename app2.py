@@ -128,7 +128,8 @@ class ModernServiceCenterApp(QMainWindow):
                     record = c.fetchone()
                     if record:
                         r_id, phone, status, dev_type, brand, model, issue, price, client_name = record
-                        safe_phone = phone[-4:] if phone and len(phone) >= 4 else "0000"
+                        clean_phone = ''.join(filter(str.isdigit, str(phone))) if phone else ""
+                        safe_phone = clean_phone[-4:] if len(clean_phone) >= 4 else "0000"
                         import datetime
                         current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
                         
@@ -995,7 +996,7 @@ class ModernServiceCenterApp(QMainWindow):
             else:
                 entry.clear()
 
-    def print_receipt(self, receipt_content: str) -> None:
+    def print_receipt(self, receipt_content: str, url: str = None) -> None:
         """Відправка квитанції на принтер через win32print"""
         try:
             # Отримуємо ім'я принтера за замовчуванням
@@ -1018,6 +1019,30 @@ class ModernServiceCenterApp(QMainWindow):
                     hdc.TextOut(3, y_position, line)  # 100 - відступ зліва
                     y_position += 40  # Збільшуємо позицію для наступного рядка
             
+            # Додаємо QR код, якщо передано URL
+            if url:
+                try:
+                    import qrcode
+                    from PIL import ImageWin
+                    
+                    y_position += 20
+                    hdc.TextOut(3, y_position, "Перевірити статус ремонту (відскануйте):")
+                    y_position += 40
+                    
+                    # Генеруємо QR-код 
+                    # Збільшено box_size до 8 для кращого читання
+                    qr = qrcode.QRCode(version=1, box_size=8, border=1)
+                    qr.add_data(url)
+                    qr.make(fit=True)
+                    img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+                    
+                    dib = ImageWin.Dib(img)
+                    width, height = img.size
+                    dib.draw(hdc.GetHandleOutput(), (10, y_position, 10 + width, y_position + height))
+                    y_position += height + 20
+                except Exception as qr_err:
+                    print(f"QR Error: {qr_err}")
+            
             # Завершуємо сторінку та документ
             hdc.EndPage()
             hdc.EndDoc()
@@ -1025,7 +1050,7 @@ class ModernServiceCenterApp(QMainWindow):
             # Звільняємо ресурси
             hdc.DeleteDC()
         except Exception as e:
-            messagebox.showerror("Помилка", f"Сталася помилка при друку: {str(e)}")
+            QMessageBox.critical(self, "Помилка", f"Сталася помилка при друку: {str(e)}")
 
     def generate_receipt(self):
         """Генерація квитанції"""
@@ -1062,6 +1087,12 @@ class ModernServiceCenterApp(QMainWindow):
         text_widget.setPlainText(receipt_content)
         layout.addWidget(text_widget)
         
+        # Формуємо URL для QR-коду
+        phone = str(values[2]) if values[2] else ""
+        clean_phone = ''.join(filter(str.isdigit, phone))
+        phone_last4 = clean_phone[-4:] if len(clean_phone) >= 4 else "0000"
+        status_url = f"https://texno.plus/status?id={item_id}&phone={phone_last4}"
+        
         # Кнопка "Друк квитанції"
         print_button = QPushButton("Друк квитанції")
         print_button.setFont(QFont('Segoe UI', 11, QFont.Bold))
@@ -1077,7 +1108,7 @@ class ModernServiceCenterApp(QMainWindow):
                 background-color: #45a049;
             }
         """)
-        print_button.clicked.connect(lambda: self.print_receipt(receipt_content))  # Виклик функції друку
+        print_button.clicked.connect(lambda: self.print_receipt(receipt_content, status_url))  # Виклик функції друку з URL
         layout.addWidget(print_button)
         
         # Кнопка "Закрити"
