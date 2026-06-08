@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaSearch, FaCheckCircle, FaSpinner, FaTimesCircle, FaTools, FaWrench, FaExclamationTriangle } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import Reveal from '../components/Reveal';
@@ -24,50 +24,56 @@ export default function StatusPage() {
   const [error, setError] = useState('');
   const [repairData, setRepairData] = useState<RepairStatus | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const idParam = params.get('id');
+    const phoneParam = params.get('phone');
+    
+    if (idParam && phoneParam) {
+      setReceiptId(idParam);
+      setPhoneLast4(phoneParam);
+      fetchData(idParam, phoneParam);
+    }
+  }, []);
+
+  const fetchData = async (id: string, phone: string) => {
+    if (!id || !phone) {
+      setError('Будь ласка, заповніть всі поля.');
+      return;
+    }
+    if (phone.length !== 4) {
+      setError('Введіть рівно 4 останні цифри вашого номера.');
+      return;
+    }
+
     setLoading(true);
     setError('');
     setRepairData(null);
 
-    if (!receiptId || !phoneLast4) {
-      setError('Будь ласка, заповніть всі поля.');
-      setLoading(false);
-      return;
-    }
-
-    if (phoneLast4.length !== 4) {
-      setError('Введіть рівно 4 останні цифри вашого номера.');
-      setLoading(false);
-      return;
-    }
-
     try {
-      const response = await fetch(`${FIREBASE_URL}/repairs/${receiptId}.json`);
-      if (!response.ok) {
-        throw new Error('Помилка з\'єднання з базою даних.');
-      }
+      const response = await fetch(`${FIREBASE_URL}/repairs/${id}.json`);
+      if (!response.ok) throw new Error('Помилка з\'єднання.');
       
       const data: RepairStatus | null = await response.json();
-      
       if (!data) {
         setError('Ремонт за таким номером квитанції не знайдено.');
-        setLoading(false);
         return;
       }
-
-      if (data.phone_last4 !== phoneLast4) {
+      if (data.phone_last4 !== phone) {
         setError('Неправильні останні цифри номера телефону.');
-        setLoading(false);
         return;
       }
-
       setRepairData(data);
     } catch (err: any) {
-      setError('Виникла помилка під час перевірки статусу. Спробуйте пізніше.');
+      setError('Виникла помилка під час перевірки статусу.');
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    fetchData(receiptId, phoneLast4);
   };
 
   const getStatusIcon = (status: string) => {
