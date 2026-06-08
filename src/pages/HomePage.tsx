@@ -74,11 +74,11 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
                             <h2 className="text-2xl lg:text-4xl font-bold text-neutral-800 mb-4">
                                 Ремонт техніки{' '}
                                 <span className="bg-gradient-to-r from-neutral-700 to-accent-600 bg-clip-text text-transparent">
-                                    Apple, Samsung, JBL, Sony та інших брендів
+                                    Apple, Samsung, JBL, Marshall, Bose та інших брендів
                                 </span>
                             </h2>
                             <p className="text-lg text-neutral-600">
-                                Сервісний центр Техноплюс — займаємось професійним ремонтом смартфонів, ноутбуків, телевізорів, портативних колонок, навушників, кавомашин та побутової техніки популярних брендів у Львові.
+                                Сервісний центр "Техноплюс" — надійний ремонт смартфонів, ноутбуків, телевізорів, портативних колонок, навушників, кавомашин та дрібної побутової техніки популярних брендів у Львові.
                             </p>
                         </div>
 
