@@ -76,6 +76,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
     { href: '/brands', label: 'Бренди' },
     { href: '#prices', label: 'Ціни' },
     { href: '/faq', label: 'FAQ' },
+    { href: '/status', label: 'Статус ремонту' },
     { href: '/contact', label: 'Контакти' },
   ];
 
