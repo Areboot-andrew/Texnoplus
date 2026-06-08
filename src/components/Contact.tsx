@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTelegram, FaViber, FaFacebookF, FaInstagram, FaPaperPlane, FaUser, FaCheckCircle } from 'react-icons/fa';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import ParallaxSection from './ParallaxSection';
 import Reveal from './Reveal';
 
@@ -37,6 +44,10 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    handleSelectChange(name, value);
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => {
       if (name === 'device') {
         const availableProblems = getProblemsForDevice(value);
@@ -391,37 +402,36 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                       <label htmlFor="device" className="block text-sm font-medium text-neutral-700 mb-2">
                         Тип пристрою
                       </label>
-                      <select
-                          id="device"
-                          name="device"
-                          value={formData.device}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 appearance-none"
-                      >
-                        <option value="">Оберіть тип пристрою</option>
-                        {deviceTypes.map((device) => (
-                          <option key={device} value={device}>{device}</option>
-                        ))}
-                      </select>
+                      <Select value={formData.device} onValueChange={(val) => handleSelectChange('device', val)}>
+                        <SelectTrigger className="w-full px-4 py-6 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 text-base">
+                          <SelectValue placeholder="Оберіть тип пристрою" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white rounded-xl border border-neutral-100 shadow-xl">
+                          {deviceTypes.map((device) => (
+                            <SelectItem key={device} value={device} className="rounded-lg cursor-pointer hover:bg-neutral-50 focus:bg-primary-50 focus:text-primary-700 transition-colors py-2.5">
+                              {device}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
                     
                     <div>
                       <label htmlFor="problem" className="block text-sm font-medium text-neutral-700 mb-2">
                         Тип проблеми
                       </label>
-                      <select
-                        id="problem"
-                        name="problem"
-                        autoComplete="off"
-                        value={formData.problem}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
-                      >
-                        <option value="">Оберіть проблему</option>
-                        {availableProblems.map((problem) => (
-                          <option key={problem} value={problem}>{problem}</option>
-                        ))}
-                      </select>
+                      <Select value={formData.problem} onValueChange={(val) => handleSelectChange('problem', val)}>
+                        <SelectTrigger className="w-full px-4 py-6 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 text-base">
+                          <SelectValue placeholder="Оберіть проблему" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white rounded-xl border border-neutral-100 shadow-xl">
+                          {availableProblems.map((problem) => (
+                            <SelectItem key={problem} value={problem} className="rounded-lg cursor-pointer hover:bg-neutral-50 focus:bg-primary-50 focus:text-primary-700 transition-colors py-2.5">
+                              {problem}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
