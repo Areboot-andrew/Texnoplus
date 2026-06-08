@@ -105,12 +105,27 @@ class ModernServiceCenterApp(QMainWindow):
         try:
             import firebase_admin
             from firebase_admin import credentials, db
-            if not firebase_admin._apps:
-                cred = credentials.Certificate('texnoplus-service-firebase-adminsdk-fbsvc-196fd045cc.json')
-                firebase_admin.initialize_app(cred, {
-                    'databaseURL': 'https://texnoplus-service-default-rtdb.europe-west1.firebasedatabase.app/'
-                })
-            self.firebase_initialized = True
+            import os, sys
+            
+            # Визначаємо шлях до папки (підтримка PyInstaller)
+            if getattr(sys, 'frozen', False):
+                base_path = sys._MEIPASS
+            else:
+                base_path = os.path.abspath(".")
+                
+            # Знаходимо json файл ключа
+            json_files = [f for f in os.listdir(base_path) if f.endswith('.json') and 'firebase' in f]
+            if json_files:
+                key_path = os.path.join(base_path, json_files[0])
+                cred = credentials.Certificate(key_path)
+                if not firebase_admin._apps:
+                    firebase_admin.initialize_app(cred, {
+                        'databaseURL': 'https://texnoplus-service-default-rtdb.europe-west1.firebasedatabase.app/'
+                    })
+                self.firebase_initialized = True
+            else:
+                print("Firebase JSON key not found!")
+                self.firebase_initialized = False
         except Exception as e:
             print(f"Firebase Init Error: {e}")
             self.firebase_initialized = False
@@ -124,10 +139,10 @@ class ModernServiceCenterApp(QMainWindow):
                 import sqlite3
                 with sqlite3.connect('service_center.db') as conn:
                     c = conn.cursor()
-                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name FROM repairs WHERE id = ?", (record_id,))
+                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name, notes, client_message FROM repairs WHERE id = ?", (record_id,))
                     record = c.fetchone()
                     if record:
-                        r_id, phone, status, dev_type, brand, model, issue, price, client_name = record
+                        r_id, phone, status, dev_type, brand, model, issue, price, client_name, notes, client_message = record
                         clean_phone = ''.join(filter(str.isdigit, str(phone))) if phone else ""
                         safe_phone = clean_phone[-4:] if len(clean_phone) >= 4 else "0000"
                         import datetime
@@ -141,6 +156,8 @@ class ModernServiceCenterApp(QMainWindow):
                             "device": f"{dev_type} {brand} {model}".strip(),
                             "issue": issue,
                             "price": price,
+                            "notes": notes if notes else "",
+                            "client_message": client_message if client_message else "",
                             "update_date": current_date
                         }
                         db.reference(f'repairs/{r_id}').set(data)
@@ -258,6 +275,16 @@ class ModernServiceCenterApp(QMainWindow):
         sync_action = QAction("Синхронізувати базу із сайтом", self)
         sync_action.triggered.connect(self.sync_all_to_firebase)
         format_menu.addAction(sync_action)
+        
+        # Додаємо дію для копіювання бази
+        backup_action = QAction("Копіювання бази", self)
+        backup_action.triggered.connect(self.backup_database)
+        format_menu.addAction(backup_action)
+        
+        # Додаємо дію для відновлення бази
+        restore_action = QAction("Відновити базу", self)
+        restore_action.triggered.connect(self.restore_database)
+        format_menu.addAction(restore_action)
 
     def format_records(self):
         """Функція для форматування записів у базі даних"""
@@ -309,7 +336,7 @@ class ModernServiceCenterApp(QMainWindow):
                 
                 with sqlite3.connect('service_center.db') as conn:
                     c = conn.cursor()
-                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name FROM repairs")
+                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name, notes, client_message FROM repairs")
                     records = c.fetchall()
                 
                 if not records:
@@ -317,7 +344,7 @@ class ModernServiceCenterApp(QMainWindow):
                 
                 updates = {}
                 for record in records:
-                    r_id, phone, status, dev_type, brand, model, issue, price, client_name = record
+                    r_id, phone, status, dev_type, brand, model, issue, price, client_name, notes, client_message = record
                     
                     clean_phone = ''.join(filter(str.isdigit, str(phone))) if phone else ""
                     safe_phone = clean_phone[-4:] if len(clean_phone) >= 4 else "0000"
@@ -331,6 +358,8 @@ class ModernServiceCenterApp(QMainWindow):
                         "device": f"{dev_type} {brand} {model}".strip(),
                         "issue": issue if issue else "",
                         "price": price if price else 0,
+                        "notes": notes if notes else "",
+                        "client_message": client_message if client_message else "",
                         "update_date": current_date
                     }
                     updates[str(r_id)] = data
@@ -491,13 +520,16 @@ class ModernServiceCenterApp(QMainWindow):
                          return_date TEXT,
                          status TEXT DEFAULT 'Прийнято',
                          notes TEXT,
-                         is_diagnostic INTEGER DEFAULT 0)''')  # Додано поле is_diagnostic
+                         is_diagnostic INTEGER DEFAULT 0,
+                         client_message TEXT)''')  # Додано поле is_diagnostic і client_message
             
-            # Перевіряємо, чи існує стовпець is_diagnostic
+            # Перевіряємо, чи існують стовпці is_diagnostic та client_message
             c.execute("PRAGMA table_info(repairs)")
             columns = [column[1] for column in c.fetchall()]
             if 'is_diagnostic' not in columns:
                 c.execute('ALTER TABLE repairs ADD COLUMN is_diagnostic INTEGER DEFAULT 0')
+            if 'client_message' not in columns:
+                c.execute('ALTER TABLE repairs ADD COLUMN client_message TEXT')
             
             conn.commit()
 
@@ -734,6 +766,18 @@ class ModernServiceCenterApp(QMainWindow):
 
     def create_buttons(self, layout):
         """Створення кнопок з фіксованою шириною та вирівнюванням по лівій стороні"""
+        # Створюємо контейнер для повідомлення клієнту
+        client_msg_layout = QHBoxLayout()
+        client_msg_label = QLabel("Повідомлення для сайту:")
+        client_msg_label.setFont(QFont('Segoe UI', 12, QFont.Bold))
+        self.client_msg_var = QComboBox()
+        self.client_msg_var.setEditable(True)
+        self.client_msg_var.addItems(["", "Замовлено запчастини, очікуємо", "Не змогли до вас додзвонитись", "Потрібна додаткова заміна деталі", "Чекаємо вашого рішення", "Готово до видачі"])
+        self.client_msg_var.setFont(QFont('Segoe UI', 12))
+        client_msg_layout.addWidget(client_msg_label)
+        client_msg_layout.addWidget(self.client_msg_var)
+        layout.addLayout(client_msg_layout)
+        
         button_layout = QHBoxLayout()
         buttons = [
             ("Додати запис", self.add_record, 'primary'),
@@ -742,8 +786,7 @@ class ModernServiceCenterApp(QMainWindow):
             ("Очистити поля", self.clear_entries, 'secondary'),
             ("Редагувати запис", self.edit_record, 'secondary'),
             ("Видалити запис", self.confirm_delete_record, 'secondary'),
-            ("Копіювання бази", self.backup_database, 'secondary'),
-            ("Відновити базу ", self.restore_database, 'secondary')
+            ("Друк акту", self.generate_act_receipt, 'secondary')
         ]
         for text, command, style_name in buttons:
             btn = QPushButton(text)
@@ -997,8 +1040,8 @@ class ModernServiceCenterApp(QMainWindow):
             c = conn.cursor()
             c.execute('''INSERT INTO repairs 
                         (client_name, phone, device_type, device_model, brand,
-                        issue, estimated_price, receipt_date, status, notes, is_diagnostic)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', ((
+                        issue, estimated_price, receipt_date, status, notes, is_diagnostic, client_message)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', ((
                 client_name,
                 self.phone_entry.text(),
                 device_type,
@@ -1009,7 +1052,8 @@ class ModernServiceCenterApp(QMainWindow):
                 QDateTime.currentDateTime().toString('yyyy-MM-dd HH:mm'),
                 "Прийнято",
                 notes,
-                is_diagnostic
+                is_diagnostic,
+                self.client_msg_var.currentText()
             )))
             conn.commit()
             last_id = c.lastrowid
@@ -1053,6 +1097,7 @@ class ModernServiceCenterApp(QMainWindow):
                 entry.setCurrentIndex(-1)
             else:
                 entry.clear()
+        self.client_msg_var.setCurrentIndex(0)
 
     def print_receipt(self, receipt_content: str, url: str = None) -> None:
         """Відправка квитанції на принтер через win32print"""
@@ -1109,6 +1154,63 @@ class ModernServiceCenterApp(QMainWindow):
             hdc.DeleteDC()
         except Exception as e:
             QMessageBox.critical(self, "Помилка", f"Сталася помилка при друку: {str(e)}")
+
+    def generate_act_receipt(self):
+        """Генерація акту виконаних робіт"""
+        selected = self.table.selectionModel().selectedRows()
+        if not selected:
+            QMessageBox.warning(self, "Помилка", "Виберіть запис для друку акту")
+            return
+        
+        index = selected[0].row()
+        item_id = self.table.model().data(self.table.model().index(index, 0))
+        
+        with sqlite3.connect('service_center.db') as conn:
+            c = conn.cursor()
+            c.execute('SELECT client_name, phone, device_type, brand, device_model, issue, estimated_price, notes FROM repairs WHERE id = ?', (item_id,))
+            record = c.fetchone()
+            
+        if not record:
+            return
+            
+        client_name, phone, dev_type, brand, model, issue, price, notes = record
+        
+        act_content = f"""
+        TEXNO PLUS
+        АКТ ВИКОНАНИХ РОБІТ
+===================================
+Клієнт: {client_name}
+Телефон: {phone}
+Пристрій: {dev_type} {brand} {model}
+Несправність: {issue}
+===================================
+ВИКОНАНІ РОБОТИ / ЗАМІНЕНІ ДЕТАЛІ:
+{notes if notes else 'Не вказано'}
+===================================
+До сплати: {price} грн
+Гарантія на виконані роботи: 30 днів
+Дякуємо, що обрали наш сервіс!
+Дата: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}
+===================================
+"""
+        # Створення вікна попереднього перегляду акту
+        preview_window = QDialog(self)
+        preview_window.setWindowTitle("Попередній перегляд акту")
+        preview_window.setGeometry(100, 100, 400, 500)
+        
+        layout = QVBoxLayout()
+        text_edit = QTextEdit()
+        text_edit.setText(act_content)
+        layout.addWidget(text_edit)
+        
+        button_layout = QHBoxLayout()
+        print_button = QPushButton("Друк акту")
+        print_button.clicked.connect(lambda: self.print_receipt(text_edit.toPlainText()))
+        button_layout.addWidget(print_button)
+        layout.addLayout(button_layout)
+        
+        preview_window.setLayout(layout)
+        preview_window.exec_()
 
     def generate_receipt(self):
         """Генерація квитанції"""
@@ -1274,7 +1376,7 @@ class ModernServiceCenterApp(QMainWindow):
         update_window.setGeometry(100, 100, 300, 500)
         layout = QVBoxLayout()
         status_var = QComboBox()
-        status_var.addItems(["Очікує запчастин", "Готово", "Видано", "Без ремонту", "В ремонті", "На погодженні"])
+        status_var.addItems(["Очікує запчастин", "Узгодити ціну", "Готово", "Видано", "Без ремонту", "В ремонті", "На погодженні"])
         widgets = [
             ("Новий статус:", status_var),
             ("Телефон:", QLineEdit()),
@@ -1401,12 +1503,21 @@ class ModernServiceCenterApp(QMainWindow):
             index = selected[0].row()
             values = [self.table.model().data(self.table.model().index(index, i)) for i in range(self.table.model().columnCount())]
             if values:
+                item_id = values[0]
                 # Форматуємо телефон у вигляді (380) 687-58-96
                 phone = str(values[2])
                 if phone.isdigit() and len(phone) == 10:
                     formatted_phone = f"({phone[:3]}) {phone[3:6]}-{phone[6:8]}-{phone[8:]}"
                 else:
                     formatted_phone = phone  # Якщо номер не відповідає формату, залишаємо як є
+                
+                # Fetch client_message directly from DB since it's not in the main table view
+                with sqlite3.connect('service_center.db') as conn:
+                    c = conn.cursor()
+                    c.execute('SELECT client_message FROM repairs WHERE id = ?', (item_id,))
+                    msg_res = c.fetchone()
+                    client_msg = msg_res[0] if msg_res and msg_res[0] else ""
+                    self.client_msg_var.setCurrentText(client_msg)
                 
                 info_text = f"""
     Клієнт: {values[1]}
@@ -1415,7 +1526,8 @@ class ModernServiceCenterApp(QMainWindow):
     Бренд: {values[5]}
     Несправність: {values[6]}
     Вартість: {values[7]} грн.
-    Примітка: {values[11]}"""
+    Примітка (роботи): {values[11]}
+    Повідомлення на сайт: {client_msg}"""
                 
                 self.info_label.setText(info_text.strip())
                 
@@ -1454,7 +1566,8 @@ class ModernServiceCenterApp(QMainWindow):
             ("Тип пристрою:", QLineEdit()),
             ("Бренд:", QLineEdit()),
             ("Модель:", QLineEdit()),
-            ("Примітка:", QLineEdit())
+            ("Примітка:", QLineEdit()),
+            ("Повід. для сайту:", QLineEdit())
         ]
         for label_text, widget in fields:
             label = QLabel(label_text)
@@ -1463,7 +1576,7 @@ class ModernServiceCenterApp(QMainWindow):
         # Заповнення поточними даними
         with sqlite3.connect('service_center.db') as conn:
             c = conn.cursor()
-            c.execute('''SELECT client_name, phone, issue, estimated_price, device_type, brand, device_model, notes
+            c.execute('''SELECT client_name, phone, issue, estimated_price, device_type, brand, device_model, notes, client_message
                         FROM repairs WHERE id = ?''', (item_id,))
             current_data = c.fetchone()
         
@@ -1495,11 +1608,12 @@ class ModernServiceCenterApp(QMainWindow):
         brand = self.format_brand(fields[5][1].text())
         issue = self.format_general_text(fields[2][1].text())
         notes = self.format_general_text(fields[7][1].text())
+        client_message = fields[8][1].text()
         
         with sqlite3.connect('service_center.db') as conn:
             c = conn.cursor()
             c.execute('''UPDATE repairs 
-                        SET client_name = ?, phone = ?, issue = ?, estimated_price = ?, device_type = ?, brand = ?, device_model = ?, notes = ?
+                        SET client_name = ?, phone = ?, issue = ?, estimated_price = ?, device_type = ?, brand = ?, device_model = ?, notes = ?, client_message = ?
                         WHERE id = ?''', ((
                 client_name,
                 fields[1][1].text(),
@@ -1509,6 +1623,7 @@ class ModernServiceCenterApp(QMainWindow):
                 brand,
                 fields[6][1].text(),
                 notes,
+                client_message,
                 item_id
             )))
             conn.commit()

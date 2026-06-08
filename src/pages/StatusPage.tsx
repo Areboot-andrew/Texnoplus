@@ -12,6 +12,8 @@ interface RepairStatus {
   issue: string;
   price: number;
   update_date: string;
+  notes?: string;
+  client_message?: string;
 }
 
 const FIREBASE_URL = 'https://texnoplus-service-default-rtdb.europe-west1.firebasedatabase.app';
@@ -87,6 +89,8 @@ export default function StatusPage() {
         return <FaSpinner className="text-5xl text-orange-500 animate-spin-slow" />;
       case 'На погодженні':
         return <FaExclamationTriangle className="text-5xl text-yellow-500" />;
+      case 'Узгодити ціну':
+        return <FaExclamationTriangle className="text-5xl text-purple-500" />;
       default:
         return <FaWrench className="text-5xl text-blue-500" />;
     }
@@ -104,6 +108,8 @@ export default function StatusPage() {
         return 'bg-orange-50 text-orange-700 border-orange-200';
       case 'На погодженні':
         return 'bg-yellow-50 text-yellow-700 border-yellow-200';
+      case 'Узгодити ціну':
+        return 'bg-purple-50 text-purple-700 border-purple-200';
       default:
         return 'bg-blue-50 text-blue-700 border-blue-200';
     }
@@ -218,10 +224,27 @@ export default function StatusPage() {
                     </div>
 
                     <div className="bg-white/60 rounded-xl p-5 space-y-4">
+                      {repairData.client_message && repairData.client_message.trim() !== '' && (
+                        <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-xl shadow-sm mb-4">
+                          <div className="flex items-center text-red-600 mb-2">
+                            <FaExclamationTriangle className="mr-2 text-lg" />
+                            <span className="font-bold text-lg">Повідомлення для вас:</span>
+                          </div>
+                          <p className="font-medium text-[15px]">{repairData.client_message}</p>
+                        </div>
+                      )}
+                      
                       <div>
                         <div className="text-sm font-medium opacity-70 mb-1">Опис несправності:</div>
                         <div className="font-medium">{repairData.issue}</div>
                       </div>
+                      
+                      {repairData.notes && repairData.notes.trim() !== '' && (
+                        <div>
+                          <div className="text-sm font-medium opacity-70 mb-1">Примітки / Виконані роботи:</div>
+                          <div className="font-medium">{repairData.notes}</div>
+                        </div>
+                      )}
                       
                       {repairData.price > 0 && (
                         <div>
