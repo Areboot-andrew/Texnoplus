@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicePage from './pages/ServicePage';
 import BrandsPage from './pages/BrandsPage';
+import FaqPage from './pages/FaqPage';
+import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ScrollToHash from './components/ScrollToHash';
 import './App.css';
@@ -79,6 +81,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage serviceData={serviceData} />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/contact" element={<ContactPage serviceData={serviceData} />} />
             <Route path="/service/:id" element={<ServicePage categories={serviceData.categories} setHeaderBottomContent={setHeaderBottomContent} />} />
             <Route path="/service/:id/:brandSlug" element={<ServicePage categories={serviceData.categories} setHeaderBottomContent={setHeaderBottomContent} />} />
             <Route path="/brands" element={<BrandsPage categories={serviceData.categories} setHeaderBottomContent={setHeaderBottomContent} />} />

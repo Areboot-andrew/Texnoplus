@@ -74,8 +74,8 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
     { href: '#services', label: 'Послуги' },
     { href: '/brands', label: 'Бренди' },
     { href: '#prices', label: 'Ціни' },
-    { href: '#location', label: 'Розташування' },
-    { href: '#contact', label: 'Контакти' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Контакти' },
   ];
 
   const scrollToSection = (href: string) => {

@@ -48,8 +48,8 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
     { label: 'Послуги', href: '#services' },
     { label: 'Бренди', href: '/brands' },
     { label: 'Ціни', href: '#prices' },
-    { label: 'Розташування', href: '#location' },
-    { label: 'Контакти', href: '#contact' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Контакти', href: '/contact' },
   ];
 
   const serviceCategories = [
@@ -170,7 +170,7 @@ const Footer: React.FC<FooterProps> = ({ company, socialLinks }) => {
                 Зателефонуйте нам або залиште заявку на сайті
               </p>
               <button
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => scrollToSection('/contact')}
                 className="bg-gradient-to-r from-neutral-600 to-accent-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-neutral-700 hover:to-accent-600 transition-all duration-300 w-full"
               >
                 Залишити заявку
