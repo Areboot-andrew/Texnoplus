@@ -347,7 +347,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          className={`w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 ${errors.name ? 'border-red-500 ring-1 ring-red-500' : ''}`}
+                          className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
                           placeholder="Іван Іванов"
                       />
                     </div>
@@ -392,9 +392,9 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                         Тип пристрою
                       </label>
                       <select
-                          id="deviceType"
-                          name="deviceType"
-                          value={formData.deviceType}
+                          id="device"
+                          name="device"
+                          value={formData.device}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300 appearance-none"
                       >

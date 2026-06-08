@@ -114,7 +114,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
         {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {features.map((feature, index) => (
-            <Reveal key={index} delayMs={feature.delay} className="h-full">
+            <Reveal key={index} delayMs={index * 100} className="h-full">
               <div className="bg-white/80 md:backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-primary-100/50 h-full">
                 <div className="w-16 h-16 mx-auto bg-primary-50 rounded-2xl flex items-center justify-center mb-4 text-primary-600">
                   {feature.icon}
