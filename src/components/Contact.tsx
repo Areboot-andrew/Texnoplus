@@ -356,6 +356,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
                           type="text"
                           id="name"
                           name="name"
+                          autoComplete="name"
                           value={formData.name}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-neutral-50 border-transparent focus:bg-white focus:border-accent-500 focus:ring-4 focus:ring-accent-500/15 rounded-xl transition-all duration-300"
