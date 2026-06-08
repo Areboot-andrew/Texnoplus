@@ -5,12 +5,13 @@ import Reveal from '../components/Reveal';
 
 interface RepairStatus {
   id: number;
+  client_name: string;
   phone_last4: string;
   status: string;
   device: string;
   issue: string;
   price: number;
-  date: string;
+  update_date: string;
 }
 
 const FIREBASE_URL = 'https://texnoplus-service-default-rtdb.europe-west1.firebasedatabase.app';
@@ -199,11 +200,14 @@ export default function StatusPage() {
                         {getStatusIcon(repairData.status)}
                       </div>
                       <div className="flex-grow">
-                        <div className="text-sm opacity-80 mb-1">
-                          Квитанція №{repairData.id} • від {repairData.date}
+                        <div className="text-sm font-medium opacity-80 mb-1">
+                          Клієнт: {repairData.client_name}
                         </div>
                         <h2 className="text-3xl font-bold mb-2">{repairData.status}</h2>
                         <div className="text-lg font-medium opacity-90">{repairData.device}</div>
+                        <div className="text-xs opacity-70 mt-1">
+                          Оновлено: {repairData.update_date}
+                        </div>
                       </div>
                     </div>
 

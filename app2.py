@@ -124,19 +124,23 @@ class ModernServiceCenterApp(QMainWindow):
                 import sqlite3
                 with sqlite3.connect('service_center.db') as conn:
                     c = conn.cursor()
-                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, receipt_date FROM repairs WHERE id = ?", (record_id,))
+                    c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name FROM repairs WHERE id = ?", (record_id,))
                     record = c.fetchone()
                     if record:
-                        r_id, phone, status, dev_type, brand, model, issue, price, date = record
+                        r_id, phone, status, dev_type, brand, model, issue, price, client_name = record
                         safe_phone = phone[-4:] if phone and len(phone) >= 4 else "0000"
+                        import datetime
+                        current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+                        
                         data = {
                             "id": r_id,
+                            "client_name": client_name,
                             "phone_last4": safe_phone,
                             "status": status,
                             "device": f"{dev_type} {brand} {model}".strip(),
                             "issue": issue,
                             "price": price,
-                            "date": date
+                            "update_date": current_date
                         }
                         db.reference(f'repairs/{r_id}').set(data)
             except Exception as e:
