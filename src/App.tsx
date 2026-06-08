@@ -81,8 +81,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage serviceData={serviceData} />} />
-            <Route path="/faq" element={<FaqPage />} />
-            <Route path="/contact" element={<ContactPage serviceData={serviceData} />} />
+            <Route path="/faq" element={<FaqPage setHeaderBottomContent={setHeaderBottomContent} />} />
+            <Route path="/contact" element={<ContactPage serviceData={serviceData} setHeaderBottomContent={setHeaderBottomContent} />} />
             <Route path="/service/:id" element={<ServicePage categories={serviceData.categories} setHeaderBottomContent={setHeaderBottomContent} />} />
             <Route path="/service/:id/:brandSlug" element={<ServicePage categories={serviceData.categories} setHeaderBottomContent={setHeaderBottomContent} />} />
             <Route path="/brands" element={<BrandsPage categories={serviceData.categories} setHeaderBottomContent={setHeaderBottomContent} />} />

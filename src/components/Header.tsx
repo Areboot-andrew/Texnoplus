@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { FaPhone, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
 import { withBasePath } from '@/lib/utils';
 
@@ -71,6 +71,7 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
   }, [isMobileMenuOpen]);
 
   const navItems = [
+    { href: '/', label: 'Головна' },
     { href: '#services', label: 'Послуги' },
     { href: '/brands', label: 'Бренди' },
     { href: '#prices', label: 'Ціни' },
@@ -79,6 +80,15 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
   ];
 
   const scrollToSection = (href: string) => {
+    if (href === '/') {
+      if (location.pathname === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        navigate('/');
+      }
+      return;
+    }
+
     if (href.startsWith('/')) {
       navigate(href);
       return;
@@ -130,17 +140,17 @@ const Header: React.FC<HeaderProps> = ({ company, bottomContent }) => {
 
         {/* Main navigation */}
         <div className="flex items-center justify-between py-2.5">
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 cursor-pointer group">
             <img 
               src={withBasePath('/images/logo.webp?v=1')} 
               alt="Техноплюс Логотип" 
-              className="w-12 h-12 object-contain"
+              className="w-12 h-12 object-contain group-hover:scale-105 transition-transform"
             />
             <div>
-              <div className="text-xl font-bold text-neutral-800">{company.name}</div>
+              <div className="text-xl font-bold text-neutral-800 group-hover:text-accent-500 transition-colors">{company.name}</div>
               <p className="text-sm text-neutral-600 hidden sm:block">Професійний ремонт техніки</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://technoplus-service.com/sitemap.xml
+
+Sitemap: https://texno.plus/sitemap.xml

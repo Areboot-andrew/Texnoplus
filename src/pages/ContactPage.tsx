@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
 import Reveal from '../components/Reveal';
 import ParallaxSection from '../components/ParallaxSection';
@@ -7,9 +9,38 @@ import GoogleMap from '../components/GoogleMap';
 
 interface ContactPageProps {
     serviceData: any;
+    setHeaderBottomContent: (content: React.ReactNode) => void;
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ serviceData }) => {
+const ContactPage: React.FC<ContactPageProps> = ({ serviceData, setHeaderBottomContent }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        setHeaderBottomContent(
+            <div className="w-full border-b border-neutral-100 shadow-sm">
+                <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-3">
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-700 hover:text-primary-600 transition-colors min-w-0"
+                    >
+                        <ArrowLeft className="w-4 h-4 flex-shrink-0" />
+                        <span className="truncate">Назад на головну</span>
+                    </Link>
+
+                    <div className="hidden sm:flex items-center gap-2 text-sm text-neutral-600 min-w-0">
+                        <Link to="/" className="hover:text-primary-600 transition-colors truncate">
+                            Головна
+                        </Link>
+                        <ChevronRight className="w-4 h-4 text-neutral-400 flex-shrink-0" />
+                        <span className="font-semibold text-neutral-800 truncate">Контакти</span>
+                    </div>
+                </div>
+            </div>
+        );
+        return () => setHeaderBottomContent(null);
+    }, [setHeaderBottomContent]);
     const localBusinessJsonLd = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -57,11 +88,12 @@ const ContactPage: React.FC<ContactPageProps> = ({ serviceData }) => {
                 jsonLd={localBusinessJsonLd}
             />
 
-            <ParallaxSection
-                className="pt-32 pb-16 min-h-[40vh] flex items-center justify-center"
-                backgroundImage="/images/service-center.webp"
-                overlayClassName="bg-gradient-to-br from-neutral-900/95 via-neutral-800/95 to-neutral-900/95"
-            >
+            <div className="pt-[var(--header-height)]">
+                <ParallaxSection
+                    className="pt-16 pb-16 min-h-[40vh] flex items-center justify-center"
+                    backgroundImage="/images/service-center.webp"
+                    overlayClassName="bg-gradient-to-br from-neutral-900/95 via-neutral-800/95 to-neutral-900/95"
+                >
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <Reveal>
                         <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -79,6 +111,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ serviceData }) => {
             
             {/* Render the Map */}
             <GoogleMap company={serviceData.company} />
+            </div>
         </>
     );
 };
