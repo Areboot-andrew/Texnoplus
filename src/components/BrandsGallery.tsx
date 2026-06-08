@@ -67,12 +67,12 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
           <h2 className="text-3xl lg:text-5xl font-bold text-neutral-800 mb-6">
             Ремонт техніки{' '}
             <span className="bg-gradient-to-r from-neutral-700 to-accent-600 bg-clip-text text-transparent">
-              Apple, Samsung, JBL, Sony
+              Apple, Samsung, JBL, Marshall, Bose та інших брендів
             </span>
           </h2>
 
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-            Працюємо з популярними брендами техніки у Львові: від смартфонів і ноутбуків до колонок, телевізорів, кавомашин та зарядних станцій.
+            Сервісний центр "Техноплюс" — надійний ремонт смартфонів, ноутбуків, телевізорів, портативних колонок, навушників, кавомашин та дрібної побутової техніки популярних брендів у Львові.
           </p>
         </Reveal>
 
