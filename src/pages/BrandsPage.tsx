@@ -39,6 +39,22 @@ const BrandsPage: React.FC<BrandsPageProps> = ({ categories, setHeaderBottomCont
     return () => setHeaderBottomContent(null);
   }, [setHeaderBottomContent]);
 
+  const breadcrumbJsonLd = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Головна",
+          "item": "https://texno.plus"
+      }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Бренди",
+          "item": "https://texno.plus/brands"
+      }]
+  });
+
   return (
     <>
       <SEO
@@ -47,6 +63,7 @@ const BrandsPage: React.FC<BrandsPageProps> = ({ categories, setHeaderBottomCont
         keywords="ремонт брендів львів, ремонт техніки брендів, сервісний центр львів"
         canonicalUrl="https://texno.plus/brands"
         imageUrl="https://texno.plus/images/repair-work.webp"
+        jsonLd={breadcrumbJsonLd}
       />
 
       <div className="pt-[var(--header-height)]">
