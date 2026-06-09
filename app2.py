@@ -137,6 +137,7 @@ class ModernServiceCenterApp(QMainWindow):
             try:
                 from firebase_admin import db
                 import sqlite3
+                data_to_push = None
                 with sqlite3.connect('service_center.db') as conn:
                     c = conn.cursor()
                     c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name, notes, client_message FROM repairs WHERE id = ?", (record_id,))
@@ -148,7 +149,7 @@ class ModernServiceCenterApp(QMainWindow):
                         import datetime
                         current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
                         
-                        data = {
+                        data_to_push = {
                             "id": r_id,
                             "client_name": client_name,
                             "phone_last4": safe_phone,
@@ -160,7 +161,9 @@ class ModernServiceCenterApp(QMainWindow):
                             "client_message": client_message if client_message else "",
                             "update_date": current_date
                         }
-                        db.reference(f'repairs/{r_id}').set(data)
+                # Виконуємо запит до Firebase поза блоком БД
+                if data_to_push:
+                    db.reference(f'repairs/{record_id}').set(data_to_push)
             except Exception as e:
                 print(f"Firebase Sync Error: {e}")
         import threading
@@ -334,6 +337,7 @@ class ModernServiceCenterApp(QMainWindow):
                 import sqlite3
                 import datetime
                 
+                records = []
                 with sqlite3.connect('service_center.db') as conn:
                     c = conn.cursor()
                     c.execute("SELECT id, phone, status, device_type, brand, device_model, issue, estimated_price, client_name, notes, client_message FROM repairs")
@@ -766,18 +770,6 @@ class ModernServiceCenterApp(QMainWindow):
 
     def create_buttons(self, layout):
         """Створення кнопок з фіксованою шириною та вирівнюванням по лівій стороні"""
-        # Створюємо контейнер для повідомлення клієнту
-        client_msg_layout = QHBoxLayout()
-        client_msg_label = QLabel("Повідомлення для сайту:")
-        client_msg_label.setFont(QFont('Segoe UI', 12, QFont.Bold))
-        self.client_msg_var = QComboBox()
-        self.client_msg_var.setEditable(True)
-        self.client_msg_var.addItems(["", "Замовлено запчастини, очікуємо", "Не змогли до вас додзвонитись", "Потрібна додаткова заміна деталі", "Чекаємо вашого рішення", "Готово до видачі"])
-        self.client_msg_var.setFont(QFont('Segoe UI', 12))
-        client_msg_layout.addWidget(client_msg_label)
-        client_msg_layout.addWidget(self.client_msg_var)
-        layout.addLayout(client_msg_layout)
-        
         button_layout = QHBoxLayout()
         buttons = [
             ("Додати запис", self.add_record, 'primary'),
@@ -1053,7 +1045,7 @@ class ModernServiceCenterApp(QMainWindow):
                 "Прийнято",
                 notes,
                 is_diagnostic,
-                self.client_msg_var.currentText()
+                ""
             )))
             conn.commit()
             last_id = c.lastrowid
@@ -1097,7 +1089,6 @@ class ModernServiceCenterApp(QMainWindow):
                 entry.setCurrentIndex(-1)
             else:
                 entry.clear()
-        self.client_msg_var.setCurrentIndex(0)
 
     def print_receipt(self, receipt_content: str, url: str = None) -> None:
         """Відправка квитанції на принтер через win32print"""
@@ -1227,7 +1218,8 @@ class ModernServiceCenterApp(QMainWindow):
         with sqlite3.connect('service_center.db') as conn:
             c = conn.cursor()
             c.execute('SELECT is_diagnostic FROM repairs WHERE id = ?', (item_id,))
-            is_diagnostic = c.fetchone()[0]  # Отримуємо значення is_diagnostic
+            row = c.fetchone()
+            is_diagnostic = row[0]
         
         # Додаємо is_diagnostic до списку values
         values.append(is_diagnostic)
@@ -1377,29 +1369,40 @@ class ModernServiceCenterApp(QMainWindow):
         layout = QVBoxLayout()
         status_var = QComboBox()
         status_var.addItems(["Очікує запчастин", "Узгодити ціну", "Готово", "Видано", "Без ремонту", "В ремонті", "На погодженні"])
+        
+        client_msg_var = QComboBox()
+        client_msg_var.setEditable(True)
+        client_msg_var.addItems(["", "Замовлено запчастини, очікуємо", "Не змогли до вас додзвонитись", "Потрібна додаткова заміна деталі", "Чекаємо вашого рішення", "Готово до видачі"])
+        
         widgets = [
             ("Новий статус:", status_var),
             ("Телефон:", QLineEdit()),
             ("Несправність:", QLineEdit()),
             ("Орієнтована ціна:", QLineEdit()),
-            ("Примітка:", QLineEdit())
+            ("Примітка (роботи):", QLineEdit()),
+            ("Повід. для сайту:", client_msg_var)
         ]
         for i, (label_text, widget) in enumerate(widgets):
             label = QLabel(label_text)
+            label.setFont(QFont('Segoe UI', 11))
+            widget.setFont(QFont('Segoe UI', 11))
+            widget.setMinimumHeight(35)
             layout.addWidget(label)
             layout.addWidget(widget)
         # Заповнення поточними даними
         with sqlite3.connect('service_center.db') as conn:
             c = conn.cursor()
-            c.execute('''SELECT status, phone, issue, estimated_price, notes 
+            c.execute('''SELECT status, phone, issue, estimated_price, notes, client_message 
                         FROM repairs WHERE id = ?''', (item_id,))
             current_data = c.fetchone()
         
         if current_data:
             status_var.setCurrentText(current_data[0])
-            for widget, value in zip([w[1] for w in widgets[1:]], current_data[1:]):  # Змінив на 1: для виключення статусу
+            for widget, value in zip([w[1] for w in widgets[1:5]], current_data[1:5]):
                 if value is not None:
                     widget.setText(str(value))
+            if current_data[5] is not None:
+                client_msg_var.setCurrentText(str(current_data[5]))
         
         # Кнопка збереження
         button_layout = QHBoxLayout()
@@ -1437,7 +1440,7 @@ class ModernServiceCenterApp(QMainWindow):
             c = conn.cursor()
             if is_diagnostic is not None:
                 c.execute('''UPDATE repairs 
-                            SET status = ?, phone = ?, issue = ?, estimated_price = ?, notes = ?, is_diagnostic = ?, return_date = ?
+                            SET status = ?, phone = ?, issue = ?, estimated_price = ?, notes = ?, is_diagnostic = ?, return_date = ?, client_message = ?
                             WHERE id = ?''', (
                     new_status,
                     widgets[1][1].text(),  # Отримуємо текст з QLineEdit або QComboBox
@@ -1446,11 +1449,12 @@ class ModernServiceCenterApp(QMainWindow):
                     widgets[4][1].text(),
                     is_diagnostic,
                     return_date,
+                    widgets[5][1].currentText(),
                     item_id
                 ))
             else:
                 c.execute('''UPDATE repairs 
-                            SET status = ?, phone = ?, issue = ?, estimated_price = ?, notes = ?, return_date = ?
+                            SET status = ?, phone = ?, issue = ?, estimated_price = ?, notes = ?, return_date = ?, client_message = ?
                             WHERE id = ?''', (
                     new_status,
                     widgets[1][1].text(),  # Отримуємо текст з QLineEdit або QComboBox
@@ -1458,6 +1462,7 @@ class ModernServiceCenterApp(QMainWindow):
                     price,
                     widgets[4][1].text(),
                     return_date,
+                    widgets[5][1].currentText(),
                     item_id
                 ))
             conn.commit()
@@ -1517,7 +1522,6 @@ class ModernServiceCenterApp(QMainWindow):
                     c.execute('SELECT client_message FROM repairs WHERE id = ?', (item_id,))
                     msg_res = c.fetchone()
                     client_msg = msg_res[0] if msg_res and msg_res[0] else ""
-                    self.client_msg_var.setCurrentText(client_msg)
                 
                 info_text = f"""
     Клієнт: {values[1]}

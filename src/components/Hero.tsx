@@ -3,6 +3,7 @@ import { FaPhone, FaMapMarkerAlt, FaCogs, FaShieldAlt, FaClock, FaThumbsUp } fro
 import { withBasePath } from '@/lib/utils';
 import ParallaxSection from './ParallaxSection';
 import Reveal from './Reveal';
+import { Link } from 'react-router-dom';
 
 interface Company {
   name: string;
@@ -71,19 +72,19 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a
-                href="#services"
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 hover:scale-[1.02] active:scale-95 text-center"
               >
                 Отримати консультацію
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-accent-600 hover:to-accent-700 transition-all duration-300 shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:scale-[1.02] active:scale-95 flex items-center justify-center space-x-2"
               >
                 <FaPhone />
                 <span>Зателефонувати</span>
-              </a>
+              </Link>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 text-sm text-neutral-600">
