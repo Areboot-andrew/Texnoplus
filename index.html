@@ -28,16 +28,8 @@
   </script>
   <!-- End Google Analytics 4 -->
   
-  <!-- AI Chat Widget (Loaded dynamically to avoid react-snap issues) -->
-  <script>
-    if (navigator.userAgent !== 'ReactSnap') {
-      var script = document.createElement('script');
-      script.src = "https://chat.texno.plus/widget.js";
-      script.dataset.channel = "e91fd00b-b569-44a6-a49e-287d94a19931";
-      script.defer = true;
-      document.head.appendChild(script);
-    }
-  </script>
+  <!-- AI Chat Widget -->
+  <script src="https://chat.texno.plus/widget.js" data-channel="e91fd00b-b569-44a6-a49e-287d94a19931" defer></script>
 </head>
 
 <body>
