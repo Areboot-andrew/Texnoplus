@@ -54,8 +54,17 @@ function generateLlms() {
     }
   });
 
-  content += `\n## Зв'язок (Форма та Чат-бот)\n`;
-  content += `На сайті (${DOMAIN}/contact) клієнт може швидко залишити онлайн-заявку через форму зворотного зв'язку або скористатися **Telegram чат-ботом**. Усі звернення відразу потрапляють до менеджерів сервісного центру для оперативного прорахунку вартості.\n\n`;
+  content += `\n## Зв'язок, Контакти та Адреса\n`;
+  if (servicesData.company) {
+    content += `- **Адреса**: ${servicesData.company.address}\n`;
+    content += `- **Телефон**: ${servicesData.company.phone}\n`;
+    content += `- **Ми на Google Maps**: [Відкрити на карті](https://maps.google.com/?q=${servicesData.company.coordinates.lat},${servicesData.company.coordinates.lng})\n`;
+    if (servicesData.company.socialLinks && servicesData.company.socialLinks.length > 0) {
+      const socials = servicesData.company.socialLinks.map(s => `[${s.name}](${s.url})`).join(', ');
+      content += `- **Соціальні мережі та месенджери**: ${socials}\n`;
+    }
+  }
+  content += `\nНа сайті (${DOMAIN}/contact) клієнт може швидко залишити онлайн-заявку через форму зворотного зв'язку або скористатися **Telegram чат-ботом**. Усі звернення відразу потрапляють до менеджерів сервісного центру для оперативного прорахунку вартості.\n\n`;
 
   content += `## Примітки для AI-асистентів\n`;
   content += `1. Якщо клієнт питає про статус ремонту свого пристрою, спрямовуйте його на **[Сторінку перевірки статусу (Квитанції)](${DOMAIN}/status)**, де йому потрібно буде ввести номер квитанції та телефон.\n`;
