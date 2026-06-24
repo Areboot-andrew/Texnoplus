@@ -335,7 +335,7 @@ const Contact: React.FC<ContactProps> = ({ company }) => {
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">Форма зворотного зв'язку</h3>
               
               {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className="space-y-6" autoComplete="on">
+                <form onSubmit={handleSubmit} className="space-y-6" autoComplete="on" toolname="submit_repair_request" tooldescription="Submit a new repair request or contact the service center. Requires customer name, phone number, device type, problem type, and an optional message.">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">

@@ -151,7 +151,7 @@ export default function StatusPage() {
             <div className="max-w-xl mx-auto">
               <Reveal delayMs={100}>
                 <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" toolname="check_repair_status" tooldescription="Check the current status of a device repair using the receipt ID and the last 4 digits of the customer's phone number.">
                     <div>
                       <label htmlFor="receiptId" className="block text-sm font-medium text-neutral-700 mb-2">
                         Номер квитанції (ID)
