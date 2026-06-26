@@ -42,7 +42,7 @@ const Services: React.FC<ServicesProps> = ({ categories }) => {
     <ParallaxSection
       id="services"
       className="py-16 lg:py-24"
-      backgroundImage="/images/repair-work.webp"
+      backgroundImage="/images/categories/coffee-machines.webp"
       overlayClassName="bg-gradient-to-b from-primary-50/95 via-white/95 to-white/95"
     >
       <div className="container mx-auto px-4">

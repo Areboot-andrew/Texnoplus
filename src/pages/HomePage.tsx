@@ -65,7 +65,7 @@ const HomePage: React.FC<HomePageProps> = ({ serviceData }) => {
             <Services categories={serviceData.categories} />
             <ParallaxSection
                 className="py-12 lg:py-16"
-                backgroundImage="/images/repair-work.webp"
+                backgroundImage="/images/categories/power-stations.webp"
                 overlayClassName="bg-gradient-to-b from-white/95 via-white/95 to-accent-50/95"
             >
                 <div className="container mx-auto px-4">

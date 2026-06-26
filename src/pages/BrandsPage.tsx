@@ -62,7 +62,7 @@ const BrandsPage: React.FC<BrandsPageProps> = ({ categories, setHeaderBottomCont
         description="Ремонтуємо техніку Apple, Samsung, Xiaomi, JBL, Sony та інших брендів у Львові. Адреса: вул. І. Огієнка, 15. Тел: +38 (067) 385 15 60. Гарантія на роботи."
         keywords="ремонт брендів львів, ремонт техніки брендів, сервісний центр львів"
         canonicalUrl="https://texno.plus/brands"
-        imageUrl="https://texno.plus/images/repair-work.webp"
+        imageUrl="https://texno.plus/images/categories/computers.webp"
         jsonLd={breadcrumbJsonLd}
       />
 

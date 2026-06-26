@@ -91,7 +91,7 @@ const FaqPage: React.FC<FaqPageProps> = ({ setHeaderBottomContent }) => {
             <div className="pt-[var(--header-height)]">
                 <ParallaxSection
                     className="pt-16 pb-16 min-h-[40vh] flex items-center justify-center"
-                    backgroundImage="/images/service-center.webp"
+                    backgroundImage="/images/categories/headphones.webp"
                     overlayClassName="bg-gradient-to-br from-neutral-900/95 via-neutral-800/95 to-neutral-900/95"
                 >
                 <div className="container mx-auto px-4 relative z-10 text-center">

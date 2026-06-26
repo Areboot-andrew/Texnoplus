@@ -49,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({ company }) => {
   return (
     <ParallaxSection
       className="min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-32"
-      backgroundImage="/images/service-center.webp"
+      backgroundImage="/images/categories/pc-assembly.webp"
       overlayClassName="bg-gradient-to-br from-primary-50/95 via-white/95 to-accent-50/95"
     >
       <div className="container mx-auto px-4 relative z-10">

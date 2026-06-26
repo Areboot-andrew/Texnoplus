@@ -54,7 +54,7 @@ const BrandsGallery: React.FC<BrandsGalleryProps> = ({ categories }) => {
     <ParallaxSection
       id="brands"
       className="py-16 lg:py-24"
-      backgroundImage="/images/repair-work.webp"
+      backgroundImage="/images/categories/computers.webp"
       overlayClassName="bg-gradient-to-b from-white/95 via-white/95 to-accent-50/95"
     >
       <div className="container mx-auto px-4">
